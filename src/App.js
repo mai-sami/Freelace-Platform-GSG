@@ -1,9 +1,12 @@
+  import Profile from "./Pages/Home/Profile/Profile";
+import { Container } from "./Style/Layout";
+ 
  
 function App() {
   return (
-    <div className="App">
- 
-    </div>
+    <Container>
+      <Profile />
+     </Container>
   );
 }
 

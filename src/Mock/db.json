@@ -1,0 +1,21 @@
+{
+    "user": {
+        "id": 1,
+        "name": "",
+        "email": "",
+        "password": "",
+        "status": "",
+        "postion": "",
+        "bio":"",
+        "priceHoure": 12,
+        "Education": {
+            "School": "",
+            "Dates": "",
+            "Degree": "",
+            "Description": "",
+            "AreaofStud": ""
+        },
+        "Languages": [],
+        "Skills": []
+    }
+}
