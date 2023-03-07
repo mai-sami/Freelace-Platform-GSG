@@ -12,6 +12,8 @@ color:${({ color }) => color || "#00000"};
 margin-top:${({ margin }) => margin}rem;
 margin-bottom:${({ marginBottom }) => marginBottom};
 line-height:${({ lineHeight }) => lineHeight};
+text-align:${({ textAlign }) => textAlign};
+
 
  `
 export const Labels = styled.label`
@@ -39,6 +41,7 @@ export const Span = styled.span`
   align-items: ${({ alignItems }) => alignItems};
   display:flex;
   line-height:${({ lineHeight }) => lineHeight};
+  text-align: ${({ textAlign }) => textAlign};
 
 `
 export const InputField = styled.input`
@@ -54,3 +57,22 @@ margin-right:${({ marginRight }) => marginRight};
 margin:${({ margin }) => margin || ".6rem auto .7rem auto"};
 text-align: ${({ textAlign }) => textAlign};
 `
+export const Form = styled.form`
+box-shadow:${({ shadow }) => shadow || "  0px 3px 10px rgba(32, 32, 32, 0.1)"};
+padding:${({ padding }) => padding || "2rem"};
+background:${({ background }) => background || "#fff"};
+border:${({ border }) => border || "1px solid #beccbe"};
+border-radius: 20px;
+margin:${({ margin }) => margin || "6rem auto auto auto"};
+width:${({ width }) => width || "40%"};
+display:${({ display }) => display};
+flex-wrap: wrap;
+
+grid-column-gap:${({ column }) => column}rem;
+@media (min-width:800px) and (max-width:1199px) {
+    width:60%
+  }
+  @media (min-width:350px) and (max-width:809px) {
+    width:80%
+  }
+  `

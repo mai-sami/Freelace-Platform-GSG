@@ -1,7 +1,7 @@
-import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
-import CircularProgress from '@mui/material/CircularProgress';
+import * as React from "react";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function sleep(delay = 0) {
   return new Promise((resolve) => {
@@ -9,7 +9,7 @@ function sleep(delay = 0) {
   });
 }
 
-export default function AutocompleteAsync({data,width="310"}) {
+export default function AutocompleteAsync({ data, width = "310" }) {
   const [open, setOpen] = React.useState(false);
   const [options, setOptions] = React.useState([]);
   const loading = open && options.length === 0;
@@ -42,7 +42,7 @@ export default function AutocompleteAsync({data,width="310"}) {
   return (
     <Autocomplete
       id="asynchronous-demo"
-      sx={{ width: width,marginRight:2 }}
+      sx={{ width: width, marginRight: 2 }}
       open={open}
       onOpen={() => {
         setOpen(true);
@@ -57,11 +57,13 @@ export default function AutocompleteAsync({data,width="310"}) {
       renderInput={(params) => (
         <TextField
           {...params}
-           InputProps={{
+          InputProps={{
             ...params.InputProps,
             endAdornment: (
               <React.Fragment>
-                {loading ? <CircularProgress color="inherit" size={20} /> : null}
+                {loading ? (
+                  <CircularProgress color="inherit" size={20} />
+                ) : null}
                 {params.InputProps.endAdornment}
               </React.Fragment>
             ),
@@ -71,4 +73,3 @@ export default function AutocompleteAsync({data,width="310"}) {
     />
   );
 }
-

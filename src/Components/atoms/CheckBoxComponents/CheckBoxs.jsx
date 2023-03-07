@@ -3,13 +3,14 @@ import React from "react";
 import { Flex } from "../../../Style/Layout";
 import { Span } from "../../../Style/GlobalElements";
 
-function CheckBoxs({ text }) {
+function CheckBoxs({name, text,color,fontSize="16px",fontWeight="500",colors }) {
   return (
     <Flex>
       <Checkbox value={true} color="success" />
-      <Span fontWeight={"500"} fontSize={"16px"} >{text}</Span>
+      <Span fontWeight={fontWeight} fontSize={fontSize} color={color} >{text}</Span>
+      <Span fontWeight={fontWeight} fontSize={fontSize} color={colors} >{name}</Span>
     </Flex>
   );
 }
-
 export default CheckBoxs;
+
