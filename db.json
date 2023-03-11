@@ -1,0 +1,100 @@
+{
+  "login": [
+    {
+      "email": "user@user.com",
+      "password": "user123",
+      "id": 2
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "id": 3
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "last_name": "جبر",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "selectedOptions": null,
+      "checks": "freelancer",
+      "id": 2
+    },
+    {
+      "last_name": "sefesf",
+      "email": "sef@admin.com",
+      "password": "admin123",
+      "selectedOptions": null,
+      "checks": "freelancer",
+      "id": 3
+    }
+  ],
+  "user": {
+    "id": 2,
+    "status": true,
+    "postion": "Eng",
+    "bio": "Front end Reavtjs",
+    "priceHoure": 12,
+    "Education": {
+      "School": "fdvfdvfdv",
+      "Dates": "dfvdfvf",
+      "Degree": "dfffffffffffffff",
+      "Description": "fdverg,kj,,,,,,,,,,,",
+      "AreaofStud": "computer",
+      "Start-date": 2016,
+      "End-date": 2033
+    },
+    "Languages": [],
+    "Skills": []
+  },
+  "Jobs": [
+    {
+      "id": 1,
+      "title": "Need a developer to load HTML Bootstrap template with content, no CMS",
+      "price": 300,
+      "typePrice": "Fixed Price",
+      "timeposted": "1",
+      "level": "Entry Level",
+      "dicription": "Hello I have HTML Bootstrap template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
+      "houers": "less than 30",
+      "reating": 4,
+      "type": "contract to hier",
+      "skills": [
+        "Css",
+        "Html"
+      ],
+      "propsals": 0,
+      "payment": true,
+      "city": "india",
+      "spent": 30
+    },
+    {
+      "id": 2,
+      "title": "Need a developer to load HTML Bootstrap template with content, no CMS",
+      "price": 300,
+      "typePrice": "Fixed Price",
+      "timeposted": "1",
+      "level": "Entry Level",
+      "dicription": "Hello I have HTML Bootstrap template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
+      "houers": "less than 30",
+      "reating": 4,
+      "type": "contract to hier",
+      "skills": [
+        "Css",
+        "Html"
+      ],
+      "propsals": 0,
+      "payment": false,
+      "city": "india",
+      "spent": 30
+    }
+  ],
+  "favourit": [
+    {}
+  ]
+}

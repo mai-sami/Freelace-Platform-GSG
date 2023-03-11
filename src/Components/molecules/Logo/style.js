@@ -2,9 +2,9 @@ import styled from "@emotion/styled";
 import { Badge } from "@mui/material";
 export const Image = styled('img')`
 border-radius: 50%;
-width:80px;
-height:80px;
-`
+width:${({ width }) => width||"80px"};
+height:${({ height }) => height||"80px"};
+ `
 export const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
         right: -3,

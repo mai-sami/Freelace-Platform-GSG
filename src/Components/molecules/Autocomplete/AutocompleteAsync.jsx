@@ -1,7 +1,8 @@
-import * as React from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import CircularProgress from "@mui/material/CircularProgress";
+import { useForm } from "react-hook-form";
 
 function sleep(delay = 0) {
   return new Promise((resolve) => {
@@ -9,18 +10,21 @@ function sleep(delay = 0) {
   });
 }
 
-export default function AutocompleteAsync({ data, width = "310" }) {
-  const [open, setOpen] = React.useState(false);
-  const [options, setOptions] = React.useState([]);
+export default function AutocompleteAsync({
+  data,
+  width = "310",
+  onChange,
+  name,
+  register,
+}) {
+  const [open, setOpen] = useState(false);
+  const [options, setOptions] = useState([]);
   const loading = open && options.length === 0;
-
-  React.useEffect(() => {
+  useEffect(() => {
     let active = true;
-
     if (!loading) {
       return undefined;
     }
-
     (async () => {
       await sleep(1e3); // For demo purposes.
       if (active) {
@@ -33,7 +37,7 @@ export default function AutocompleteAsync({ data, width = "310" }) {
     };
   }, [loading]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!open) {
       setOptions([]);
     }
@@ -41,7 +45,7 @@ export default function AutocompleteAsync({ data, width = "310" }) {
 
   return (
     <Autocomplete
-      id="asynchronous-demo"
+      onChange={onChange}
       sx={{ width: width, marginRight: 2 }}
       open={open}
       onOpen={() => {
@@ -60,12 +64,12 @@ export default function AutocompleteAsync({ data, width = "310" }) {
           InputProps={{
             ...params.InputProps,
             endAdornment: (
-              <React.Fragment>
+              <Fragment>
                 {loading ? (
                   <CircularProgress color="inherit" size={20} />
                 ) : null}
                 {params.InputProps.endAdornment}
-              </React.Fragment>
+              </Fragment>
             ),
           }}
         />

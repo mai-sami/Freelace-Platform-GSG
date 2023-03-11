@@ -8,6 +8,6 @@ export const CircelDiv = styled('div')`
     justify-content: center;  
     margin: .5rem;
     color:${({ color }) => color || "#108a00"};
-    width:${({ width }) => width ||"40px"};
-    height:${({ height }) => height||"40px"};
+    width:${({ width }) => width ||"35px"};
+    height:${({ height }) => height||"35px"};
 `

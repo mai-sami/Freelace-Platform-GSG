@@ -5,12 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+ }
 
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
   padding: 2rem !important;
   width: 860px !important;
-  max-width: 707px !important;
+   max-width: 707px !important;
  }
 
 .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root.Mui-selected {
@@ -18,7 +18,7 @@ body {
   background-color: #108a00 !important;
   border-radius: 13px !important;
   width: 100% !important;
-}
+ }
 
 .css-1nxmd3h-MuiListItem-root,
 .css-g6xhbl-MuiButtonBase-root-MuiMenuItem-root {
@@ -30,3 +30,7 @@ body {
 .css-mx2db0-MuiPaper-root {
   box-shadow: none !important;
 }
+ 
+/* .css-h4y409-MuiList-root{
+  width: 90% !important;
+} */

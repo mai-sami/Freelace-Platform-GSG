@@ -1,7 +1,7 @@
 import React from "react";
-import { Image, StyledBadge } from "./style";
-import logo from "../../../assets/logo.jpg";
-import { Badge, Box, IconButton } from "@mui/material";
+import {StyledBadge } from "./style";
+ import { Badge, Box, IconButton } from "@mui/material";
+import Avetaer from "./Avetaer";
 function Logo() {
   return (
     <>
@@ -10,22 +10,20 @@ function Logo() {
           vertical: "bottom",
           horizontal: "right",
         }}
-        
       >
-           <IconButton aria-label="cart">
-        <StyledBadge
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "bottom",
-          }}
-          badgeContent={""}
-          color="success"
-        >
-          <Image src={logo} alt="logo" />
-        </StyledBadge>
-      </IconButton>
+        <IconButton aria-label="cart">
+          <StyledBadge
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "bottom",
+            }}
+            badgeContent={""}
+            color="success"
+          >
+            <Avetaer />
+          </StyledBadge>
+        </IconButton>
       </Badge>
-     
     </>
   );
 }

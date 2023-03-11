@@ -13,8 +13,7 @@ margin-top:${({ margin }) => margin}rem;
 margin-bottom:${({ marginBottom }) => marginBottom};
 line-height:${({ lineHeight }) => lineHeight};
 text-align:${({ textAlign }) => textAlign};
-
-
+padding:${({ padding }) => padding};
  `
 export const Labels = styled.label`
   font-family: 'Inter';
@@ -42,7 +41,6 @@ export const Span = styled.span`
   display:flex;
   line-height:${({ lineHeight }) => lineHeight};
   text-align: ${({ textAlign }) => textAlign};
-
 `
 export const InputField = styled.input`
 background:${({ background }) => background || "#FFFFFF"};  
@@ -64,10 +62,9 @@ background:${({ background }) => background || "#fff"};
 border:${({ border }) => border || "1px solid #beccbe"};
 border-radius: 20px;
 margin:${({ margin }) => margin || "6rem auto auto auto"};
-width:${({ width }) => width || "40%"};
+width:${({ width }) => width || "37%"};
 display:${({ display }) => display};
 flex-wrap: wrap;
-
 grid-column-gap:${({ column }) => column}rem;
 @media (min-width:800px) and (max-width:1199px) {
     width:60%
@@ -76,3 +73,5 @@ grid-column-gap:${({ column }) => column}rem;
     width:80%
   }
   `
+export const Card = styled(Form)`
+`

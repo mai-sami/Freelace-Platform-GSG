@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react";
+import { TitleText } from "../../../Style/GlobalElements";
+import toTitleCase from "../../../utils/helper";
 
 function Title() {
-    return (
-        <>
-        </>
-    )
+  return (
+    <>
+      <TitleText fontSize={"20px"}>{toTitleCase("mai sami.")}</TitleText>
+    </>
+  );
 }
 
-export default Title
+export default Title;

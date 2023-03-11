@@ -14,6 +14,7 @@ function Button({
   background,
   color,
   fontSize,
+  type,
   disabled
 }) {
   return (
@@ -30,6 +31,7 @@ function Button({
         onClick={onClick}
         fontWeight={fontWeight}
         disabled={disabled}
+        type={type}
       >
         {children}
         {name}

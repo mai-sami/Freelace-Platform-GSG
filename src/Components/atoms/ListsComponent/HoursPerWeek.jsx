@@ -19,7 +19,7 @@ function HoursPerWeek() {
     <>
       <>
         <Column>
-          <IconsFlex name={"Hours per week "}>
+          <IconsFlex  name={"Hours per week "}>
             <EditIcon onClick={handleClickOpen} open={open} />
             <CustomizedDialogs
               title={"Availability"}

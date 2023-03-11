@@ -448,3 +448,61 @@ export const City = [
     "Zambia",
     'Zimbabwe'
 ]
+
+export const dataProfileVisibility = [
+    { text: "Public", details: "Your profile is visible to the general public and will show up in search engine results" },
+    { text: "Upwork Users Only", details: "Only logged in Upwork users will see your profile" },
+    { text: "Private", details: "Upwork Users Only" }
+
+]
+
+
+export const experienceLevel = [
+    { text: "Public", details: "Your profile is visible to the general public and will show up in search engine results" },
+    { text: "Upwork Users Only", details: "Only logged in Upwork users will see your profile" },
+    { text: "Private", details: "Upwork Users Only" }
+
+]
+export const jobType = [
+    { text: "Public", details: "Your profile is visible to the general public and will show up in search engine results" },
+    { text: "Upwork Users Only", details: "Only logged in Upwork users will see your profile" },
+    { text: "Private", details: "Upwork Users Only" }
+
+]
+export const proposals = [
+    { text: "Less than 5" },
+    { text: "5 to 10" },
+    { text: "10 to 15" },
+    { text: "15 to 20" },
+    { text: "20 to 50" },
+]
+export const clientInfo = [
+    { text: "My previous clients" },
+    { text: "Payment verified" },
+]
+export const clientHistory = [
+    { text: "No hires" },
+    { text: "1 to 9 hires" },
+    { text: "10+ hires" }
+]
+export const projectLengths = [
+    { text: "Less than one month)" },
+    { text: "1 to 3 months" },
+    { text: "More than 6 months" }
+]
+export const hoursPerWeek = [
+    { text: "Less than 30 hrs/week " },
+    { text: "More than 30 hrs/week" }
+]
+
+export const connectsNeeded = [
+    { text: "2 or less connects" },
+    { text: "4 connects" },
+    { text: "6 connects" }
+
+]
+
+export const Contract = [
+    { text: "Contract-to-hire roles" }
+
+]

@@ -1,22 +1,23 @@
 import React from "react";
 import EditIcon from "@mui/icons-material/Edit";
-import {Column, Flex } from "../../Style/Layout";
-import { Labels, Span, TitleText } from "../../Style/GlobalElements";
+import { Column, Flex } from "../../Style/Layout";
+import { Labels, Span } from "../../Style/GlobalElements";
 import Logo from "../../Components/molecules/Logo/Logo";
 import Button from "../../Components/atoms/Button/Button";
 import { CircelDiv } from "../../Components/atoms/IconsFlexComponent/style";
-import toTitleCase, { Times } from "../../utils/helper";
+import  { Times } from "../../utils/helper";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
- function Introduction() {
+import Title from "../../Components/atoms/Titles/Title";
+function Introduction() {
   return (
     <>
       <Flex justifyContent="space-between">
         <Flex alignItems={"left"}>
           <Logo />
           <Column marginLeft={"1.3rem"}>
-            <TitleText fontSize={"20px"}>{toTitleCase("mai sami.")}</TitleText>
-            <Span alignItems="center">
+            <Title />
+             <Span alignItems="center">
               <LocationOnIcon style={{ fontSize: "16", color: "#5e6d55" }} />
               Gaza, Palestinian Territories – {Times} local time
             </Span>
@@ -40,7 +41,7 @@ import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
                     }}
                   />
                 </Button>
-                of{" "}
+                of
                 <CircelDiv width={"35px"} height={"35px"}>
                   <EditIcon style={{ fontSize: "18" }} />
                 </CircelDiv>
@@ -58,7 +59,7 @@ import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
           <Button name={"Profile Settings"} />
         </Flex>
       </Flex>
-      </>
+    </>
   );
 }
 export default Introduction;

@@ -4,15 +4,22 @@ export const Container = styled('div')`
 width: 70%;
 margin: auto;
 `
+export const Containers = styled('div')`
+width: 95%;
+margin: auto;
+`
 export const Box = styled('div')`
-border: 1px solid #e4ebe4;
- margin-top:2rem;
-border-radius: 12px;
+border:${({ border }) => border ||"1px solid #e4ebe4"};
+ border-radius: 12px;
+ width:${({ width }) => width || "75%"};
+margin:${({ margin }) => margin|| "2rem auto auto"}; 
+padding:${({ padding }) => padding};
+
 `
 export const Flex = styled('div')`
 display:flex;
 align-items:${({ alignItems }) => alignItems || "center"};
-justify-content:${({ justifyContent }) => justifyContent };
+justify-content:${({ justifyContent }) => justifyContent};
 margin-left: ${({ marginLeft }) => marginLeft}rem;
 flex-direction:${({ flexDirection }) => flexDirection};
 flex-wrap:${({ flexWrap }) => flexWrap};
@@ -20,23 +27,37 @@ width:${({ width }) => width};
 margin: ${({ margin }) => margin};
 border: ${({ border }) => border};
 padding-left:${({ paddingLeft }) => paddingLeft};
-
+ 
 `
-export const FlexResponsive=styled(Flex)`
+export const FlexResponsive = styled(Flex)`
 align-items:${({ alignItems }) => alignItems || "baseline"};
 
   @media (min-width:400px) and (max-width:1199px) {
     flex-direction: column-reverse;
   }
- 
+`
+export const FlexResp = styled(FlexResponsive)`
+align-items:${({ alignItems }) => alignItems || "baseline"};
 
+  @media (min-width:400px) and (max-width:1199px) {
+    flex-direction: column;
+  }
 `
 export const Column = styled('div')`
 display: flex;
 flex-direction: column;
  margin-left: ${({ marginLeft }) => marginLeft};
- align-items:${({ alignItems }) => alignItems };
-
+ align-items:${({ alignItems }) => alignItems};
+ margin-right: ${({ marginRight }) => marginRight};
 line-height: 2;
+padding:${({ padding }) => padding};
+align-items:${({ alignItems }) => alignItems};
+border-bottom:${({ border }) => border};
 
 `
+export const CardsStyled = styled(Column)`
+&:hover {
+  background-color: #f2f7f2 ;
+  cursor: pointer;
+
+`   

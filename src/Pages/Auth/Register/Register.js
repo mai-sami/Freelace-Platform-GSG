@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Button from '../../../Components/atoms/Button/Button'
-import Dividers from '../../../Components/atoms/DividerComponent/Divider'
 import { Form, InputField, TitleText } from '../../../Style/GlobalElements'
 import { Column } from '../../../Style/Layout'
 import FormRegister from './FormRegister/FormRegister'

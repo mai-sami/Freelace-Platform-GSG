@@ -55,7 +55,7 @@ export default function DenseMenu() {
   return (
     <Paper
       div
-      sx={{ width: "92%", padding: "1rem", height: "100vh", margin: "0 auto" }}
+      sx={{ width: "100%", padding: "1rem", height: "100vh", margin: "0 auto" }}
     >
       <MenuList dense>
         <MenuItem>
