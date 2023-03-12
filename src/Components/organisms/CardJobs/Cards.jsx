@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Span, TitleText } from "../../../Style/GlobalElements";
+import { Span, TitleTexts } from "../../../Style/GlobalElements";
 import { CardsStyled, Flex } from "../../../Style/Layout";
 import Rating from "@mui/material/Rating";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -11,24 +11,30 @@ import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
 import CreditCardOffIcon from "@mui/icons-material/CreditCardOff";
 import Reademore from "../../Readmore/Reademore";
-import { useDispatch} from "react-redux";
- import { Divider } from "@mui/material";
-import { addToFavourite, deleteToFavourite } from "../../../Redux/Jobs/Favourites/favouriteSlice";
-function Cards({ data }) {
+import { useDispatch } from "react-redux";
+import { Divider } from "@mui/material";
+import {
+  addToFavourite,
+  deleteToFavourite,
+} from "../../../Redux/Jobs/Favourites/favouriteSlice";
+import Chips from "../../atoms/ChipComponents/Chip";
+ function Cards({ data,Search }) {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   const dispatch = useDispatch();
   return (
     <>
+  
+     
       {data?.map((item) => (
         <CardsStyled>
           <Flex justifyContent={"space-between"}>
-            <TitleText color={"#108a00"}>{item.title} </TitleText>
+            <TitleTexts fontSize={"17px"}>{item.title} </TitleTexts>
             <Flex>
               <CircelDiv>
                 <Checkbox
                   color="success"
                   {...label}
-                  onClick={() => dispatch(deleteToFavourite(item.id))} 
+                  onClick={() => dispatch(deleteToFavourite(item.id))}
                   icon={<ThumbDownIcon color="success" />}
                   checkedIcon={<ThumbDownIcon color="green" />}
                 />
@@ -36,10 +42,10 @@ function Cards({ data }) {
               <CircelDiv>
                 <Checkbox
                   value={item.id}
-                  onClick={() => dispatch(addToFavourite(item.id))}
+                  onClick={() => dispatch(addToFavourite(item))}
                   color="success"
                   {...label}
-                  icon={<FavoriteBorder  />}
+                  icon={<FavoriteBorder />}
                   checkedIcon={<Favorite />}
                 />
               </CircelDiv>
@@ -54,6 +60,7 @@ function Cards({ data }) {
             <Span>Posted {item.time} houer</Span>
           </Flex>
           <Reademore>{item.dicription}</Reademore>
+          <Chips Skills={item.skills} />
           <Span color="#5e6d55"> Propsals {item.propsals}</Span>
 
           <Flex>
@@ -104,8 +111,8 @@ function Cards({ data }) {
           <Divider style={{ margin: "1rem 0 2rem 0" }} />
         </CardsStyled>
       ))}
-    </>
-  );
+      </>
+   );
 }
 
 export default Cards;

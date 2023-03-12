@@ -8,7 +8,8 @@ import { TitleText } from "../../../Style/GlobalElements";
 import SavedJobs from "./SavedJobs/SavedJobs";
 import BestMatches from "./BestMatches/BestMatches";
 import MostRecently from "./MostRecently/MostRecently";
-  
+import SearchHeader from "../../atoms/SearchComponents/SearchHeader";
+   
 function TabPanel(props) {
   
   const { children, value, index, ...other } = props;
@@ -51,6 +52,7 @@ export default function TabsComponent() {
   };
 
   return (
+    <>
     <Box sx={{ width: "100%", padding: "3rem 0 2rem 0" }}>
       <TitleText padding="0 0 2rem 2rem">Jobs you might like</TitleText>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -74,5 +76,6 @@ export default function TabsComponent() {
         <SavedJobs />
       </TabPanel>
     </Box>
+    </>
   );
 }

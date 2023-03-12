@@ -3,7 +3,7 @@ import React from "react";
 import { Span } from "../../../Style/GlobalElements";
 import { Column, Flex } from "../../../Style/Layout";
 
-function CheckBoxUseMap({ color, onClick, checked, onChange, data }) {
+function CheckBoxUseMap({ onClicks, onChange, data }) {
   return (
     <>
       {data?.map((item) => (
@@ -11,9 +11,7 @@ function CheckBoxUseMap({ color, onClick, checked, onChange, data }) {
           <Flex>
             <Checkbox
               onChange={onChange}
-              checked={checked}
-              name={item.text}
-              onClick={onClick}
+              onClick={onClicks}
               value={item.text}
               color="success"
             />

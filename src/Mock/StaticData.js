@@ -458,17 +458,12 @@ export const dataProfileVisibility = [
 
 
 export const experienceLevel = [
-    { text: "Public", details: "Your profile is visible to the general public and will show up in search engine results" },
-    { text: "Upwork Users Only", details: "Only logged in Upwork users will see your profile" },
-    { text: "Private", details: "Upwork Users Only" }
+    { text: "Entry Level" },
+    { text: "Intermediate" },
+    { text: "Expert " }
 
 ]
-export const jobType = [
-    { text: "Public", details: "Your profile is visible to the general public and will show up in search engine results" },
-    { text: "Upwork Users Only", details: "Only logged in Upwork users will see your profile" },
-    { text: "Private", details: "Upwork Users Only" }
-
-]
+export const jobsType = ["Public", "Upwork Users Only", "Private"]
 export const proposals = [
     { text: "Less than 5" },
     { text: "5 to 10" },

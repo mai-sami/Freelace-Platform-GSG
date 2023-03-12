@@ -8,6 +8,7 @@ import ClientInfo from "./ClientInfo";
 import ClientTimezone from "./ClientTimezone";
 import Connects from "./Connects";
 import Contract from "./Contract";
+import ExperienceLevel from "./ExperienceLevel";
 import HoursPerWeek from "./HoursPerWeek";
 import JobType from "./JobType";
 import ProjectLength from "./ProjectLength";
@@ -18,6 +19,7 @@ function SideFilter() {
       <Column>
         <Divider />
         <CategoryFilter />
+        <ExperienceLevel />
         <JobType />
         <ClientInfo />
         <ClientHistory />

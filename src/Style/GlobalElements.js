@@ -15,6 +15,12 @@ line-height:${({ lineHeight }) => lineHeight};
 text-align:${({ textAlign }) => textAlign};
 padding:${({ padding }) => padding};
  `
+ export const TitleTexts = styled(TitleText)`
+ &:hover {
+  color: #108a00 ;
+  cursor: pointer;
+
+`
 export const Labels = styled.label`
   font-family: 'Inter';
   font-style: normal;

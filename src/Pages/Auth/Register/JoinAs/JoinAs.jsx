@@ -50,6 +50,7 @@ function JoinAs() {
                       setChecks("client") &
                       setDisabled((disabled) => (disabled = false))
                     }
+
                   />
                 </Flex>
                 <TitleText>I’m a freelancer, looking for work</TitleText>

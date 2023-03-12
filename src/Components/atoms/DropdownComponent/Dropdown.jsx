@@ -5,7 +5,7 @@ import close from "../../../assets/close.png";
 import opens from "../../../assets/arrows.png";
 import CheckBoxUseMap from "../CheckBoxComponents/CheckBoxUseMap";
 
-function Dropdown({ show, text, handelShow,data ,children}) {
+function Dropdown({ show, text, handelShow,data ,children,onChange,onClicks}) {
   return (
     <>
       <Flex margin={"1rem"} justifyContent={"space-between"}>
@@ -24,7 +24,7 @@ function Dropdown({ show, text, handelShow,data ,children}) {
           justifyContent={"left"}
           flexDirection={"column"}
         >
-          <CheckBoxUseMap data={data} />
+          <CheckBoxUseMap onClick={onClicks} onChange={onChange} data={data} />
           {children}
          </Flex>
       ) : (

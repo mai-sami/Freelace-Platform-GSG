@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { GetAllJobs } from "./jobsActions";
 
- export const jobsSlice = createSlice({
+export const jobsSlice = createSlice({
     name: "jobs",
     initialState: {
         Jobs: [],
@@ -10,7 +10,6 @@ import { GetAllJobs } from "./jobsActions";
         isSuccess: false,
      },
     reducers: {
-       
     },
     extraReducers: {
         [GetAllJobs.pending]: (state, { payload }) => {
@@ -30,6 +29,5 @@ import { GetAllJobs } from "./jobsActions";
         }
     }
 })
-
 
  

@@ -5,8 +5,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import AddIcon from "@mui/icons-material/Add";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import { Flex } from "../../../../Style/Layout";
-import Card from "../../Card/Card";
-function Portfolio() {
+ function Portfolio() {
   const count = 3;
   return (
     <>
@@ -25,8 +24,7 @@ function Portfolio() {
           <EditIcon />
         </CircelDiv>
       </Flex>
-      <Card />
-    </>
+     </>
   );
 }
 

@@ -13,3 +13,4 @@ function SearchComponents({placeholder}) {
 }
 
 export default SearchComponents;
+

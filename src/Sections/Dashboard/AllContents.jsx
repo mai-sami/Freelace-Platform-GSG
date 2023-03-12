@@ -1,15 +1,21 @@
 import { Divider } from "@mui/material";
 import React from "react";
+import SearchHeader from "../../Components/atoms/SearchComponents/SearchHeader";
 import Proposals from "../../Components/organisms/BoxProposals/Proposals";
 import TabsComponent from "../../Components/organisms/TabsComponents/TabsComponent";
-import { Box, FlexResp } from "../../Style/Layout";
+import { Box, Column, FlexResp } from "../../Style/Layout";
 import SideBarDashboard from "./SideBarDashboard";
 
 function AllContents() {
   return (
     <FlexResp width={"80%"}>
-      <Box>
-        <TabsComponent />
+      <Box border={"none"}>
+        <Column>
+          <SearchHeader />
+          <Box margin={"1rem auto auto"} width={"100%"}>
+            <TabsComponent />
+          </Box>
+        </Column>
       </Box>
       <div>
         <Box width={"270px"}>

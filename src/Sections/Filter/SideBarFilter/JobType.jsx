@@ -1,17 +1,31 @@
 import { Divider } from "@mui/material";
-import React, { useState } from "react";
+import React, {useState } from "react";
+import { useDispatch } from "react-redux";
 import Dropdown from "../../../Components/atoms/DropdownComponent/Dropdown";
-import { jobType } from "../../../Mock/StaticData";
-
+import { jobsType } from "../../../Mock/StaticData";
+import { GetFilterJobs } from "../../../Redux/Filter/filterAxctions";
+ 
 function JobType() {
   const [open, setOpen] = useState(false);
-  const handelJobType= () => {
-    setOpen(!open)
-}
+  const dispatch = useDispatch();
+  const handelJobType = () => {
+    setOpen(!open);
+  };
+  const handelChecks = (e) => {
+    const { value } = e.target;
+    dispatch(GetFilterJobs(value));
+  };
   return (
     <>
-      <Dropdown data={jobType} handelShow={handelJobType} show={open} text={"Job type"} />
+      <Dropdown
+        onChange={handelChecks}
+        data={jobsType}
+        handelShow={handelJobType}
+        show={open}
+        text={"Job type"}
+      />
       <Divider />
+      <input onChange={handelChecks} value={"mai"} type={"checkbox"} />
     </>
   );
 }

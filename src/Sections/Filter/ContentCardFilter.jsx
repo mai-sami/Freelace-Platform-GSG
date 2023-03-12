@@ -6,10 +6,10 @@ import Typography from "@mui/material/Typography";
 import SavedJobs from "../../Components/organisms/TabsComponents/SavedJobs/SavedJobs";
 import BestMatches from "../../Components/organisms/TabsComponents/BestMatches/BestMatches";
 import { Box } from "../../Style/Layout";
+import SearchHeader from "../../Components/atoms/SearchComponents/SearchHeader";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -26,7 +26,6 @@ function TabPanel(props) {
     </div>
   );
 }
-
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
@@ -54,6 +53,7 @@ export default function ContentCardFilter() {
           <Tab label="Search" {...a11yProps(0)} />
           <Tab label="Saved Jobs" {...a11yProps(1)} />
         </Tabs>
+        <SearchHeader  />
       </div>
       <TabPanel value={value} index={0}>
         <BestMatches />

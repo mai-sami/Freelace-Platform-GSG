@@ -3,9 +3,9 @@ import AllContents from '../../Sections/Dashboard/AllContents'
 
 function Dashboard() {
     return (
-        <>
-            <AllContents />
-        </>
+    <>
+ <AllContents />
+    </>
     )
 }
 
