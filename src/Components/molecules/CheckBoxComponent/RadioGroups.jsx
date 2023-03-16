@@ -5,7 +5,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import { Span } from "../../../Style/GlobalElements";
 
-export default function RadioGroups({ data }) {
+export default function RadioGroups({ data,onChange }) {
   return (
     <FormControl>
       <RadioGroup>
@@ -13,7 +13,8 @@ export default function RadioGroups({ data }) {
           <>
             <FormControlLabel
               value={item.text}
-              control={<Radio />}
+              onChange={onChange}
+               control={<Radio />}
               label={item.text}
               color="success"
             />

@@ -11,9 +11,7 @@ export const filterSlice = createSlice({
         Search:[]
     },
     reducers: {
-        Filter: (state, { payload }) => {
-            state.Filter = [...state.Filter, payload]
-        }
+
     },
     extraReducers: {
 
@@ -30,7 +28,7 @@ export const filterSlice = createSlice({
             state.message = payload
             state.loading = false
             state.isSuccess = false
-
+        
         },
         [SearchJobs.pending]: (state, { payload }) => {
             state.loading = true
@@ -50,4 +48,3 @@ export const filterSlice = createSlice({
     }
 })
 
-export const { Filter } = filterSlice.actions

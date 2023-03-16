@@ -10,15 +10,17 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Span } from "../../../Style/GlobalElements";
+import { useSelector } from "react-redux";
 function AddViewProfile() {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
-
+  const { data } = useSelector((state) => state.profile);
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
   };
   return (
     <Column>
       <IconsFlex
+        margins={"0 0 0 1rem"}
         name={"View profile"}
         icons={
           <CircelDiv>
@@ -35,7 +37,7 @@ function AddViewProfile() {
             onClick={(event) => handleListItemClick(event, 0)}
           >
             <ListItemText primary="Front End Developer">
-              <Span>Front End Developer</Span>
+              <Span>{data[0]?.categiory}</Span>
             </ListItemText>
             <ArrowForwardIosIcon />
           </ListItemButton>

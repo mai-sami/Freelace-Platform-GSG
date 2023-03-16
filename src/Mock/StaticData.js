@@ -240,12 +240,16 @@ export const School = [
     "Berea College",
     "Alabama A&M University"
 ]
-export const data = [
+export const dataHoures = [
     { text: "More than 30 hrs/week" },
     { text: "Less than 30 hrs/week" },
     { text: "As needed - open to offers" },
     { text: "None" },
 ]
+export const Availabilitys = [
+    { text: "on" },
+    { text: "off" },
+ ]
 
 export const Degrees = [
     "Doctor of Engineering (DEng)",
@@ -455,12 +459,11 @@ export const dataProfileVisibility = [
     { text: "Private", details: "Upwork Users Only" }
 
 ]
-
-
+ 
 export const experienceLevel = [
     { text: "Entry Level" },
     { text: "Intermediate" },
-    { text: "Expert " }
+    { text: "Expert" }
 
 ]
 export const jobsType = ["Public", "Upwork Users Only", "Private"]

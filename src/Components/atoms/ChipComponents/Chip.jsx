@@ -1,14 +1,17 @@
 import React from "react";
 import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
- 
-function Chips({ Skills }) {
+ import Keywords from "react-keywords";
+import { Flex } from "../../../Style/Layout";
+
+function Chips({ Skills, ValueSearch }) {
   return (
-    <Stack direction="row" spacing={1}>
+    <Flex  flexWrap={"wrap"}>
       {Skills?.map((item) => (
-        <Chip label={item} />
+        <>
+          <Chip style={{margin:".3rem"}} label={<Keywords value={ValueSearch}>{item}</Keywords>} />
+        </>
       ))}
-    </Stack>
+    </Flex>
   );
 }
 

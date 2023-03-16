@@ -2,10 +2,11 @@ import React from "react";
 import { TitleText } from "../../../Style/GlobalElements";
 import toTitleCase from "../../../utils/helper";
 
-function Title() {
-  return (
+function Title({name}) {
+  console.log(name)
+   return (
     <>
-      <TitleText fontSize={"20px"}>{toTitleCase("mai sami.")}</TitleText>
+      <TitleText fontSize={"20px"}>{name}</TitleText>
     </>
   );
 }

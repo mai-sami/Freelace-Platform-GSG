@@ -6,12 +6,27 @@ import CustomizedDialogs from "../../../Components/molecules/Dialogs/Dialog";
 import { Labels, Span } from "../../../Style/GlobalElements";
 import RadioGroups from "../../../Components/molecules/CheckBoxComponent/RadioGroups";
 import { dataProfileVisibility } from "../../../Mock/StaticData";
- function ProfileVisibility() {
+import { useDispatch, useSelector } from "react-redux";
+import { EditprofileVisibility } from "../../../Redux/Prifiles/profileActions";
+function ProfileVisibility() {
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
+    setOpen(false);
+  };
+  const [profileVisibility, setTopping] = useState(null);
+  const { data } = useSelector((state) => state.profile);
+  const dispatch = useDispatch();
+
+  const onOptionChange = (e) => {
+    setTopping(e.target.value);
+  };
+  const handelSubmit = () => {
+    const id = 1;
+    console.log(profileVisibility);
+    dispatch(EditprofileVisibility([id, ...data, profileVisibility]));
     setOpen(false);
   };
   return (
@@ -24,19 +39,19 @@ import { dataProfileVisibility } from "../../../Mock/StaticData";
               title={"Edit Profile Visibility"}
               open={open}
               handleClose={handleClose}
+              onClick={handelSubmit}
             >
               <Flex>
                 <Labels fontSize={"13px"}>
                   We set your profile to private because you haven't earned in a
                   while.
-                 
-                <Labels fontWeight={"600"}fontSize={"13px"}>
-                  To reactivate your profile, apply to jobs and start earning.
-                </Labels>
+                  <Labels fontWeight={"600"} fontSize={"13px"}>
+                    To reactivate your profile, apply to jobs and start earning.
+                  </Labels>
                 </Labels>
               </Flex>
               <br></br>
-              <RadioGroups data={dataProfileVisibility} />
+              <RadioGroups onChange={onOptionChange} data={dataProfileVisibility} />
               <Span margins="2rem 0 0 0">
                 Your profile will not appear in search results on Upwork or
                 search engines. It will not be visible via a direct link for
@@ -50,7 +65,7 @@ import { dataProfileVisibility } from "../../../Mock/StaticData";
               </Span>
             </CustomizedDialogs>
           </IconsFlex>
-          <Span>Private</Span>
+          <Span>{data[0]?.profileVisibility}</Span>
         </Column>
       </>
     </>

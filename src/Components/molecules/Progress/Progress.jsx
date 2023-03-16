@@ -25,7 +25,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 export default function ProgressBars() {
-  const value = `${50}%`;
+  const value = 50;
   return (
     <Box
       sx={{
@@ -44,7 +44,7 @@ export default function ProgressBars() {
       </Link>
       <Flex>
         <BorderLinearProgress variant="determinate" value={value} />
-        <Span padding={"0 1rem 0 0"}>{value}</Span>
+        <Span padding={"0 1rem 0 0"}>{value}%</Span>
       </Flex>
     </Box>
   );

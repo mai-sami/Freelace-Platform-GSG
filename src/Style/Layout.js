@@ -18,6 +18,7 @@ padding:${({ padding }) => padding};
 `
 export const Flex = styled('div')`
 display:flex;
+overflow: ${({ overflow }) => overflow};
 align-items:${({ alignItems }) => alignItems || "center"};
 justify-content:${({ justifyContent }) => justifyContent};
 margin-left: ${({ marginLeft }) => marginLeft}rem;
@@ -25,9 +26,12 @@ flex-direction:${({ flexDirection }) => flexDirection};
 flex-wrap:${({ flexWrap }) => flexWrap};
 width:${({ width }) => width};
 margin: ${({ margin }) => margin};
+padding: ${({ padding }) => padding};
+
 border: ${({ border }) => border};
 padding-left:${({ paddingLeft }) => paddingLeft};
- 
+flex-wrap:${({ flexWrap }) => flexWrap};
+
 `
 export const FlexResponsive = styled(Flex)`
 align-items:${({ alignItems }) => alignItems || "baseline"};
@@ -53,6 +57,7 @@ line-height: 2;
 padding:${({ padding }) => padding};
 align-items:${({ alignItems }) => alignItems};
 border-bottom:${({ border }) => border};
+width:${({ width }) => width};
 
 `
 export const CardsStyled = styled(Column)`

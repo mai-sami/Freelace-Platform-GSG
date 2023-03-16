@@ -11,6 +11,7 @@ import Verifications from "./Verifications";
 import Education from "./Education";
 
 export default function BasicList() {
+
   return (
     <Box sx={{ maxWidth: "100%", minWidth: 360, bgcolor: "background.paper" }}>
       <nav aria-label="main mailbox folders">
@@ -20,13 +21,11 @@ export default function BasicList() {
               <AddViewProfile />
             </ListItem>
             <Divider />
-            {/* Video introduction */}
-            <div style={{ padding: "1.8rem" }}>
+             <div style={{ padding: "1.8rem" }}>
               <ListItem disablePadding>
                 <VideoIntroduction />
               </ListItem>
-              {/* Hours per week  */}
-              <ListItem disablePadding>
+               <ListItem disablePadding>
                 <HoursPerWeek />
               </ListItem>
               <ListItem disablePadding>

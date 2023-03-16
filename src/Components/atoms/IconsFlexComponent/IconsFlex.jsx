@@ -9,12 +9,13 @@ function IconsFlex({
   icons,
   paddingLeft,
   fontWeight,
-  fontSize="16px",
-  justifyContent
+  fontSize = "16px",
+  justifyContent,
+  margins
 }) {
   return (
-    <Flex  justifyContent={justifyContent} paddingLeft={paddingLeft}>
-      <TitleText fontSize={fontSize} fontWeight={fontWeight}>
+    <Flex justifyContent={justifyContent} paddingLeft={paddingLeft}>
+      <TitleText margins={margins} fontSize={fontSize} fontWeight={fontWeight}>
         {name}
       </TitleText>
       <CircelDiv>{children}</CircelDiv>

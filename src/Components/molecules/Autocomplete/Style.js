@@ -99,12 +99,14 @@ export const Root = styled('div')`
     font-size: 17px;
   `
 export const InputWrapper = styled('div') `
-    width: 700px;
+    width:100%;
     border: 1px solid #d9d9d9;
      border-radius: 4px;
     padding: 1px;
     display: flex;
     flex-wrap: wrap;
+    min-height: 95px;
+
      &:hover {
       border-color: '#3c8224'
     }

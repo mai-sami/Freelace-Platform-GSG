@@ -1,9 +1,7 @@
 import React from "react";
 import { Span, TitleText } from "../../../Style/GlobalElements";
-import { Box, Column, Flex } from "../../../Style/Layout";
-import Button from "../../atoms/Button/Button";
-import IconsFlex from "../../atoms/IconsFlexComponent/IconsFlex";
-
+import { Box, Column} from "../../../Style/Layout";
+ 
 function Proposals({ children, name, subName, details }) {
   return (
     <Box width={"300px"}>

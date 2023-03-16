@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -7,7 +7,7 @@ import SavedJobs from "../../Components/organisms/TabsComponents/SavedJobs/Saved
 import BestMatches from "../../Components/organisms/TabsComponents/BestMatches/BestMatches";
 import { Box } from "../../Style/Layout";
 import SearchHeader from "../../Components/atoms/SearchComponents/SearchHeader";
-
+import Paginations from "../../Components/atoms/Paginations/Pagination";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -39,9 +39,8 @@ function a11yProps(index) {
   };
 }
 
-export default function ContentCardFilter() {
-  const [value, setValue] = React.useState(0);
-
+export default function ContentCardFilter({onChange}) {
+  const [value, setValue] = useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -62,6 +61,6 @@ export default function ContentCardFilter() {
       <TabPanel value={value} index={1}>
         <SavedJobs />
       </TabPanel>
-    </Box>
+     </Box>
   );
 }

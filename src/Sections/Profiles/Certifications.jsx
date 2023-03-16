@@ -3,6 +3,7 @@ import { CircelDiv } from "../../Components/atoms/IconsFlexComponent/style";
 import { Span } from "../../Style/GlobalElements";
 import { Box, Column, Flex } from "../../Style/Layout";
 import AddIcon from "@mui/icons-material/Add";
+import certification from '../../assets/certification.PNG'
 
 function Certifications() {
   return (
@@ -16,8 +17,8 @@ function Certifications() {
           <AddIcon />
         </CircelDiv>
       </Flex>
-      <Column alignItems={"center"}>
-        <img src="ff" />
+      <Column style={{margin:"0rem 0 3rem 0"}}  alignItems={"center"}>
+      <img src={certification} alt="certification"   height={"125px"} />
         <Span>
           Listing your certifications can help prove your specific knowledge or
           abilities. (+10%)

@@ -1,16 +1,24 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Base_Url } from "../../../../Config/api";
+import UseApi from "../../../../Hooks/Filter/useFilter";
+import { GetFavouritJobs } from "../../../../Redux/Favourit/favouritAction";
 import { Card, TitleText } from "../../../../Style/GlobalElements";
 import { Column, Flex } from "../../../../Style/Layout";
 import { imageJobsSaved } from "../../../../utils/Images";
 import Cards from "../../CardJobs/Cards";
+import CardSaved from "./CardSaved";
 
 function SavedJobs() {
-  const { Favourite } = useSelector((state) => state.favourite);
-  console.log(Favourite);
+  const {favourit}=useSelector((state)=>state.favourit)
+  const dispatch = useDispatch();
+ 
+  useEffect(() => {
+    dispatch(GetFavouritJobs());
+  }, []);
   return (
     <>
-      {Favourite?.length === 0 ? (
+      {favourit?.length === 0 ? (
         <Column alignItems={"center"}>
           {imageJobsSaved}
           <TitleText color="#5e6d55" padding={"2rem 0 0 0"}>
@@ -22,7 +30,7 @@ function SavedJobs() {
         </Column>
       ) : (
         <>
-          <Cards data={Favourite} />
+          <CardSaved />
         </>
       )}
     </>

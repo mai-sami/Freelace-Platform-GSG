@@ -1,7 +1,6 @@
 import { Divider } from "@mui/material";
-import React, { useState } from "react";
-import Dropdown from "../../../Components/atoms/DropdownComponent/Dropdown";
-import { Box, Column } from "../../../Style/Layout";
+import React from "react";
+ import { Box, Column } from "../../../Style/Layout";
 import CategoryFilter from "./CategoryFilter";
 import ClientHistory from "./ClientHistory";
 import ClientInfo from "./ClientInfo";

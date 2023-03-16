@@ -54,7 +54,7 @@ export default function CustomizedDialogs({
   icons,
   handleClose,
   open,
-  handelSubmit,
+  onClick,
 }) {
   return (
     <div>
@@ -83,7 +83,7 @@ export default function CustomizedDialogs({
             background={"#fff"}
             border={"2px solid #108a00"}
           />
-          <Button width={"120px"} onClick={handelSubmit} name={"Save"} />
+          <Button width={"120px"} onClick={onClick} name={"Save"} />
         </DialogActions>
       </BootstrapDialog>
     </div>

@@ -17,6 +17,7 @@ export const Inputs = styled('input')`
 outline: none;
     border: none;
     flex: 1;
+    width:100%;
  `
 export const DivSearchHeader = styled('div')`
  border: 1px solid #d5e0d5;

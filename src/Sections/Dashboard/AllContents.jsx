@@ -1,11 +1,11 @@
 import { Divider } from "@mui/material";
 import React from "react";
-import SearchHeader from "../../Components/atoms/SearchComponents/SearchHeader";
-import Proposals from "../../Components/organisms/BoxProposals/Proposals";
-import TabsComponent from "../../Components/organisms/TabsComponents/TabsComponent";
 import { Box, Column, FlexResp } from "../../Style/Layout";
+import Proposals from "../../Components/organisms/BoxProposals/Proposals";
+import SearchHeader from "../../Components/atoms/SearchComponents/SearchHeader";
 import SideBarDashboard from "./SideBarDashboard";
-
+import TabsComponent from "../../Components/organisms/TabsComponents/TabsComponent";
+ 
 function AllContents() {
   return (
     <FlexResp width={"80%"}>

@@ -1,10 +1,10 @@
 import { Divider } from "@mui/material";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Dropdown from "../../../Components/atoms/DropdownComponent/Dropdown";
 import { jobsType } from "../../../Mock/StaticData";
 import { GetFilterJobs } from "../../../Redux/Filter/filterAxctions";
- 
+
 function JobType() {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
@@ -25,7 +25,6 @@ function JobType() {
         text={"Job type"}
       />
       <Divider />
-      <input onChange={handelChecks} value={"mai"} type={"checkbox"} />
     </>
   );
 }

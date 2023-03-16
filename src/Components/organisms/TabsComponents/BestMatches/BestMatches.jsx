@@ -12,12 +12,11 @@ function BestMatches() {
   const { Search } = useSelector((state) => state.filter);
   const dispatch = useDispatch();
   const location = useLocation();
-  const params = new URLSearchParams(location.search)
-const ValueSearch =params.get("q")
+  const params = new URLSearchParams(location.search);
+  const ValueSearch = params.get("q");
   useEffect(() => {
     dispatch(SearchJobs(ValueSearch));
   }, [dispatch]);
-  console.log(location.pathname)
   return (
     <Column>
       <Span>
@@ -25,7 +24,7 @@ const ValueSearch =params.get("q")
         Ordered by most relevant.
         {ValueSearch}
       </Span>
-      <Cards  data={Search} />
+      <Cards dataCard={Search} ValueSearch={ValueSearch} />
     </Column>
   );
 }

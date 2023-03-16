@@ -2,8 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import CircularProgress from "@mui/material/CircularProgress";
-import { useForm } from "react-hook-form";
-
+ 
 function sleep(delay = 0) {
   return new Promise((resolve) => {
     setTimeout(resolve, delay);
@@ -46,6 +45,7 @@ export default function AutocompleteAsync({
   return (
     <Autocomplete
       onChange={onChange}
+      multiple={true}
       sx={{ width: width, marginRight: 2 }}
       open={open}
       onOpen={() => {

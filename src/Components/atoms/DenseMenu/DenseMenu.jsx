@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Paper from "@mui/material/Paper";
 import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
@@ -17,11 +17,20 @@ import WorkHistory from "./Secations/WorkHistory";
 import Portfolio from "./Secations/Portfolio";
 import "../../../index.css";
 import ProjectCatalog from "./Secations/ProjectCatalog";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    EditUserPrice,
+  EditUserText,
+  GetUserData,
+} from "../../../Redux/Prifiles/profileActions";
+import Skills from "./Skills";
 export default function DenseMenu() {
   const [open, setOpen] = useState(false);
-  const [Values, setValues] = useState("");
+  const { data } = useSelector((state) => state.profile);
+  const [priceHoure, setValues] = useState(data[0]?.priceHoure);
   const [charge, setCharge] = useState("");
   const [resive, setResive] = useState("");
+  const [feaild, setfeaild] = useState(data[0]?.feaild);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -35,23 +44,32 @@ export default function DenseMenu() {
   const handleCloseHoure = () => {
     setHour(false);
   };
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(GetUserData());
+  }, []);
+
   const HandelChange = (e) => {
     const Price = e.target.value;
     const Service_Fee = Price * (20 / 100);
     const Resive = Price - Service_Fee;
-
     setValues(Price);
     setCharge(Service_Fee);
     setResive(Resive);
   };
-  const HandelSubmit = () => {
-    const formatData = { Values, charge, resive };
-    console.log(formatData, "formatData");
-    // setValues("");
+  const HandelEditPrice = () => {
+    const id = 1;
+    dispatch(EditUserPrice([id, ...data, priceHoure]));
     setCharge("");
     setResive("");
     setHour(false);
   };
+  const HandelEditTitle = () => {
+    const id = 1;
+    dispatch(EditUserText([id, ...data, feaild]));
+    setOpen(false);
+  };
+
   return (
     <Paper
       div
@@ -59,27 +77,31 @@ export default function DenseMenu() {
     >
       <MenuList dense>
         <MenuItem>
-          <Flex justifyContent={"space-between"}>
-            <Column>
-              <IconsFlex name={"Front-End Developer (Reactjs)"}>
-                <EditIcon onClick={handleClickOpen} open={open} />
-              </IconsFlex>
-              <Flex>
-                <Span>Specializes in</Span>
-                <Span fontWeight={"600"}> Front-End Development</Span>
+          {data?.map((item) => (
+            <>
+              <Flex justifyContent={"space-between"}>
+                <Column>
+                  <IconsFlex name={item.feaild}>
+                    <EditIcon onClick={handleClickOpen} open={open} />
+                  </IconsFlex>
+                  <Flex>
+                    <Span>Specializes in</Span>
+                    <Span fontWeight={"600"}> {item.feaild}</Span>
+                  </Flex>
+                </Column>
+                <IconsFlex
+                  name={`$${item.priceHoure}.00/hr`}
+                  icons={
+                    <CircelDiv>
+                      <InsertLinkIcon />
+                    </CircelDiv>
+                  }
+                >
+                  <AddIcon onClick={handleClickHour} />
+                </IconsFlex>
               </Flex>
-            </Column>
-            <IconsFlex
-              name={`$${Values}.00/hr`}
-              icons={
-                <CircelDiv>
-                  <InsertLinkIcon />
-                </CircelDiv>
-              }
-            >
-              <AddIcon onClick={handleClickHour} />
-            </IconsFlex>
-          </Flex>
+            </>
+          ))}
         </MenuItem>
         <MenuItem>
           <Description />
@@ -89,10 +111,15 @@ export default function DenseMenu() {
           <WorkHistory />
         </MenuItem>
         <Divider />
-        <MenuItem>
+        <>
           <Portfolio />
+        </>
+        <Divider />
+        <MenuItem>
+          <Skills />
         </MenuItem>
         <Divider />
+
         <MenuItem>
           <ProjectCatalog />
         </MenuItem>
@@ -101,6 +128,7 @@ export default function DenseMenu() {
         title={"Edit your title"}
         open={open}
         handleClose={handleClose}
+        onClick={HandelEditTitle}
       >
         <Span fontWeight={"600"} fontSize={"18px"} lineHeight={"3"}>
           Your title
@@ -111,11 +139,12 @@ export default function DenseMenu() {
         </Span>
         <InputField
           margin={"2.2rem 0 0 0  "}
-          value={"Front-End Developer (Reactjs)"}
+          value={feaild}
+          onChange={(e) => setfeaild(e.target.value)}
         />
       </CustomizedDialogs>
       <CustomizedDialogs
-        handelSubmit={HandelSubmit}
+        onClick={HandelEditPrice}
         title={"Change hourly rate"}
         open={hour}
         handleClose={handleCloseHoure}
@@ -143,7 +172,7 @@ export default function DenseMenu() {
                 textAlign={"end"}
                 margin={".6rem .4rem .7rem auto"}
                 placeholder="15.00$"
-                value={Values}
+                value={priceHoure}
                 onChange={HandelChange}
               />
               <Span>/hr</Span>

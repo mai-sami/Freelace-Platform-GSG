@@ -1,15 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
-import authSlice from './Auth/authSlice'
+ import { favouritSlice } from './Favourit/favouritSlice'
 import { filterSlice } from './Filter/filterSlice'
-import { favouriteSlice } from './Jobs/Favourites/favouriteSlice'
 import { jobsSlice } from './Jobs/jobsSlice'
+import { profileSlice } from './Prifiles/profileSlice'
 
 export const store = configureStore({
   reducer: {
-    auth: authSlice.reducer,
     jobs: jobsSlice.reducer,
-    favourite: favouriteSlice.reducer,
-    filter:filterSlice.reducer
+    filter: filterSlice.reducer,
+    profile: profileSlice.reducer,
+    favourit: favouritSlice.reducer
+
   }
 })
 

@@ -14,6 +14,8 @@ margin-bottom:${({ marginBottom }) => marginBottom};
 line-height:${({ lineHeight }) => lineHeight};
 text-align:${({ textAlign }) => textAlign};
 padding:${({ padding }) => padding};
+margin:${({ margins }) => margins};
+
  `
  export const TitleTexts = styled(TitleText)`
  &:hover {
@@ -47,6 +49,8 @@ export const Span = styled.span`
   display:flex;
   line-height:${({ lineHeight }) => lineHeight};
   text-align: ${({ textAlign }) => textAlign};
+  word-break: break-all;
+
 `
 export const InputField = styled.input`
 background:${({ background }) => background || "#FFFFFF"};  
@@ -69,6 +73,8 @@ border:${({ border }) => border || "1px solid #beccbe"};
 border-radius: 20px;
 margin:${({ margin }) => margin || "6rem auto auto auto"};
 width:${({ width }) => width || "37%"};
+min-height:${({ width }) => width || "300px"};
+
 display:${({ display }) => display};
 flex-wrap: wrap;
 grid-column-gap:${({ column }) => column}rem;
