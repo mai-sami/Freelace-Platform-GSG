@@ -1,0 +1,187 @@
+{
+  "profile": [
+    {
+      "id": 1,
+      "first_name": "mai sami jaber",
+      "last_name": "jaber",
+      "email": "admin@admin.com",
+      "city": "Gaza, Palestinian",
+      "password": "admin123",
+      "status": false,
+      "priceHoure": "44",
+      "feaild": "Front-End (React js) Developer",
+      "discription": "Life is very boring,but that's okay !!",
+      "selectedOptions": null,
+      "profileVisibility": "Public",
+      "checks": "freelancer",
+      "badge": "off",
+      "categiory": "Front End Developer",
+      "Experiences": [
+        {
+          "name": "PHP Laravel",
+          "details": "Courses for PHP Laravel"
+        },
+        {
+          "name": "Front-End developer",
+          "details": "Courses of Frontend development with React.js study (year)"
+        }
+      ],
+      "skillsItem": [
+        [
+          "Visual Basic",
+          "C++"
+        ]
+      ],
+      "catigrys": [
+        "Ecommerce Development",
+        "Web Development"
+      ],
+      "perWeek": "More than 30 hrs/week",
+      "history": "ff",
+      "title": "b",
+      "hours": "7"
+    }
+  ],
+  "images": [
+    {
+      "imageOne": "data:image/jpeg;base64,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",
+      "id": 1
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "name": "Palestine Technical College",
+      "text": "Bachelor's degree, Computer engineering",
+      "start": "2016",
+      "end": "2013",
+      "description": "nice mai"
+    }
+  ],
+  "languages": [
+    {
+      "id": 1,
+      "name": "English",
+      "type": "Fluent"
+    },
+    {
+      "id": 2,
+      "name": "Arabic",
+      "type": "Native or Bilingual"
+    },
+    {
+      "name": "Bachelor of Industrial Design",
+      "type": "Doctor of Musical Arts (DMA)",
+      "id": 3
+    }
+  ],
+  "Jobs": [
+    {
+      "id": 1,
+      "title": "Bootstrap template with content, no CMS",
+      "price": 300,
+      "typePrice": "Fixed Price",
+      "timeposted": "1",
+      "jobsType": "Private",
+      "categiory": "Full Stack Development",
+      "levels": "Entry Level",
+      "dicription": "Hello I have HTML Bootstrap template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
+      "houers": "less than 30",
+      "reating": 4,
+      "type": "contract to hier",
+      "skills": [
+        "Css",
+        "Html"
+      ],
+      "skillsCategiory": [
+        "Front end developer ",
+        "Full Stack "
+      ],
+      "propsals": 0,
+      "payment": true,
+      "city": "india",
+      "spent": 30
+    },
+    {
+      "id": 2,
+      "title": "Need a developer to load HTML  template with content, no CMS",
+      "price": 200,
+      "typePrice": "Fixed-Price",
+      "timeposted": "1",
+      "jobsType": "Public",
+      "levels": "Intermediate",
+      "dicription": "Hello I have HTML template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
+      "houers": "less than 30",
+      "reating": 4,
+      "categiory": "Full Stack Development",
+      "type": "One-time project",
+      "skills": [
+        "Css",
+        "Html"
+      ],
+      "skillsCategiory": [
+        "Front end developer ",
+        "Full Stack "
+      ],
+      "propsals": 50,
+      "payment": false,
+      "city": "india",
+      "spent": 30
+    }
+  ],
+  "favourit": [
+    {
+      "id": 1,
+      "data": {
+        "id": 1,
+        "title": "Bootstrap template with content, no CMS",
+        "price": 300,
+        "typePrice": "Fixed Price",
+        "timeposted": "1",
+        "jobsType": "Private",
+        "levels": "Entry Level",
+        "dicription": "Hello I have HTML Bootstrap template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
+        "houers": "less than 30",
+        "reating": 4,
+        "type": "contract to hier",
+        "skills": [
+          "Css",
+          "Html"
+        ],
+        "propsals": 0,
+        "payment": true,
+        "city": "india",
+        "spent": 30
+      }
+    },
+    {
+      "id": 2,
+      "data": {
+        "id": 2,
+        "title": "Need a developer to load HTML  template with content, no CMS",
+        "price": 200,
+        "typePrice": "Fixed-Price",
+        "timeposted": "1",
+        "jobsType": "Public",
+        "levels": "Intermediate",
+        "dicription": "Hello I have HTML template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
+        "houers": "less than 30",
+        "reating": 4,
+        "categiory": "Full Stack Development",
+        "type": "One-time project",
+        "skills": [
+          "Css",
+          "Html"
+        ],
+        "skillsCategiory": [
+          "Front end developer ",
+          "Full Stack "
+        ],
+        "propsals": 50,
+        "payment": false,
+        "city": "india",
+        "spent": 30
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+import { createAsyncThunk } from "@reduxjs/toolkit"
+import axios from "axios"
+import { Base_Url } from "../../Config/api"
+
+export const GetFilterJobs = createAsyncThunk(
+    'filter/allfilter',
+    async ({Data}, { rejectWithValue }) => {
+        try {
+            const response = await axios.get(
+                `${Base_Url}jobs?${Data}`)
+            console.log(response)
+            return response.data
+        } catch (error) {
+             if (error.response && error.response.data.message) {
+                return rejectWithValue(error.response.data.message)
+            } else {
+                return rejectWithValue(error.message)
+            }
+        }
+    }
+)
+
+export const SearchJobs = createAsyncThunk(
+    'jobs/search', 
+    async (value, { rejectWithValue }) => {
+        try {
+            const response = await axios.get(
+                `${Base_Url}jobs?q=${value}`,
+            )
+            return response.data
+        } catch (error) {
+             if (error.response && error.response.data.message) {
+                return rejectWithValue(error.response.data.message)
+            } else {
+                return rejectWithValue(error.message)
+            }
+        }
+    }
+)
+

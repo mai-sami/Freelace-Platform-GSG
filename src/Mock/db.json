@@ -1,0 +1,22 @@
+{
+    "login": {},
+    "Register": {},
+    "user": {
+        "id": 1,
+        "status": true,
+        "postion": "Eng",
+        "bio": "Front end Reavtjs",
+        "priceHoure": 12,
+        "Education": {
+            "School": "fdvfdvfdv",
+            "Dates": "dfvdfvf",
+            "Degree": "dfffffffffffffff",
+            "Description": "fdverg,kj,,,,,,,,,,,",
+            "AreaofStud": "computer",
+            "Start-date": 2016,
+            "End-date": 2033
+        },
+        "Languages": [],
+        "Skills": []
+    }
+}

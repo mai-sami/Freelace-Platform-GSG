@@ -1,11 +1,15 @@
-import React from 'react'
+import { Pagination } from "@mui/material";
+import React from "react";
 
-function Pagination() {
-    return (
-        <>
-        Pagination
-        </>
-    )
+function Paginations({onChange}) {
+   return (
+    <>
+   <Pagination
+            onChange={onChange}
+            count={10}
+            color="secondary"
+          />    </>
+  );
 }
 
-export default Pagination
+export default Paginations;

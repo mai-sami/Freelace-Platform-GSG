@@ -1,10 +1,18 @@
-import React from 'react'
+import React from "react";
+import Chip from "@mui/material/Chip";
+ import Keywords from "react-keywords";
+import { Flex } from "../../../Style/Layout";
 
-function Chip() {
-    return (
-       <>
-       </> 
-    )
+function Chips({ Skills, ValueSearch }) {
+  return (
+    <Flex  flexWrap={"wrap"}>
+      {Skills?.map((item) => (
+        <>
+          <Chip style={{margin:".3rem"}} label={<Keywords value={ValueSearch}>{item}</Keywords>} />
+        </>
+      ))}
+    </Flex>
+  );
 }
 
-export default Chip
+export default Chips;

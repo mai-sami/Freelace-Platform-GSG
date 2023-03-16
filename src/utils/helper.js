@@ -1,10 +1,14 @@
-import React from 'react'
+export default function toTitleCase(str) {
+    const titleCase = str
+      .toLowerCase()
+      .split(' ')
+      .map(word => {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      })
+      .join(' ').substr(0, 5);
+  
+    return titleCase;
+  }
 
-function Helper() {
-    return (
-     <>
-     </>   
-    )
-}
+export const Times = new Date().toLocaleTimeString('lv-LV',{hour: '2-digit', minute:'2-digit'})
 
-export default Helper

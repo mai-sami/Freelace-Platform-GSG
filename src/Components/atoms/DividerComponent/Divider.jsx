@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
+import Divider from "@mui/material/Divider";
 
-function Divider() {
-    return (
-        <>
-        </>
-    )
+function Dividers({ children }) {
+  return (
+    <>
+      <Divider>{children}</Divider>
+    </>
+  );
 }
-
-export default Divider
+export default Dividers;
