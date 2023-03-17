@@ -9,10 +9,10 @@ width: 95%;
 margin: auto;
 `
 export const Box = styled('div')`
-border:${({ border }) => border ||"1px solid #e4ebe4"};
+border:${({ border }) => border || "1px solid #e4ebe4"};
  border-radius: 12px;
  width:${({ width }) => width || "75%"};
-margin:${({ margin }) => margin|| "2rem auto auto"}; 
+margin:${({ margin }) => margin || "2rem auto auto"}; 
 padding:${({ padding }) => padding};
 
 `
@@ -33,6 +33,7 @@ padding-left:${({ paddingLeft }) => paddingLeft};
 flex-wrap:${({ flexWrap }) => flexWrap};
 
 `
+ 
 export const FlexResponsive = styled(Flex)`
 align-items:${({ alignItems }) => alignItems || "baseline"};
 
