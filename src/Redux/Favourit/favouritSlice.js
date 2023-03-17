@@ -7,7 +7,8 @@ export const favouritSlice = createSlice({
         messages: "",
         isLoading: false,
         isSuccess: false,
-        data: [], favourit: []
+        data: [],
+        favourit: []
     },
     reducers: {
     },

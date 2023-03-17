@@ -27,8 +27,7 @@ export const GetAllJobsRecent = createAsyncThunk(
             const response = await axios.get(
                 `${Base_Url}jobs?_sort=timeposted&_order=desc`,
             )
-            console.log(response.data, "GetAllJobsRecent")
-            return response.data
+             return response.data
         } catch (error) {
             if (error.response && error.response.data.message) {
                 return rejectWithValue(error.response.data.message)

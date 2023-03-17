@@ -4,12 +4,11 @@ import { Base_Url } from "../../Config/api"
 
 export const GetFilterJobs = createAsyncThunk(
     'filter/allfilter',
-    async ({Data}, { rejectWithValue }) => {
+    async ({value}, { rejectWithValue }) => {
         try {
             const response = await axios.get(
-                `${Base_Url}jobs?${Data}`)
-            console.log(response)
-            return response.data
+                `${Base_Url}jobs?levels=${value}&levels=${value}`)
+             return response.data
         } catch (error) {
              if (error.response && error.response.data.message) {
                 return rejectWithValue(error.response.data.message)

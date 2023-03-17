@@ -51,7 +51,7 @@ export default function TabsComponent() {
   const [value, setValue] = useState(0);
   const [page, setPage] = useState(0);
   const { favourit } = useSelector((state) => state.favourit);
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -74,8 +74,7 @@ export default function TabsComponent() {
           <Tabs
             value={value}
             onChange={handleChange}
-            aria-label="basic tabs example"
-          >
+           >
             <Tab label="Best Matches" {...a11yProps(0)} />
             <Tab label="Most Recent" {...a11yProps(1)} />
             <Tab label={`Saved Jobs (${+favourit.length})`} {...a11yProps(2)} />

@@ -23,7 +23,7 @@
         },
         {
           "name": "Front-End developer",
-          "details": "Courses of Frontend development with React.js study (year)"
+          "details": "Courses of Frontend development React with React.js study (year)"
         }
       ],
       "skillsItem": [
@@ -78,7 +78,7 @@
   "Jobs": [
     {
       "id": 1,
-      "title": "Bootstrap template with content, no CMS",
+      "title": "Bootstrap React template with content, no CMS",
       "price": 300,
       "typePrice": "Fixed Price",
       "timeposted": "1",
@@ -132,56 +132,34 @@
   "favourit": [
     {
       "id": 1,
-      "data": {
-        "id": 1,
-        "title": "Bootstrap template with content, no CMS",
-        "price": 300,
-        "typePrice": "Fixed Price",
-        "timeposted": "1",
-        "jobsType": "Private",
-        "levels": "Entry Level",
-        "dicription": "Hello I have HTML Bootstrap template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
-        "houers": "less than 30",
-        "reating": 4,
-        "type": "contract to hier",
-        "skills": [
-          "Css",
-          "Html"
-        ],
-        "propsals": 0,
-        "payment": true,
-        "city": "india",
-        "spent": 30
-      }
-    },
-    {
-      "id": 2,
-      "data": {
-        "id": 2,
-        "title": "Need a developer to load HTML  template with content, no CMS",
-        "price": 200,
-        "typePrice": "Fixed-Price",
-        "timeposted": "1",
-        "jobsType": "Public",
-        "levels": "Intermediate",
-        "dicription": "Hello I have HTML template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
-        "houers": "less than 30",
-        "reating": 4,
-        "categiory": "Full Stack Development",
-        "type": "One-time project",
-        "skills": [
-          "Css",
-          "Html"
-        ],
-        "skillsCategiory": [
-          "Front end developer ",
-          "Full Stack "
-        ],
-        "propsals": 50,
-        "payment": false,
-        "city": "india",
-        "spent": 30
-      }
+      "data": [
+        {
+          "id": 1,
+          "title": "Bootstrap React template with content, no CMS",
+          "price": 300,
+          "typePrice": "Fixed Price",
+          "timeposted": "1",
+          "jobsType": "Private",
+          "categiory": "Full Stack Development",
+          "levels": "Entry Level",
+          "dicription": "Hello I have HTML Bootstrap template Need to load it with content will provide content for every page content for page blocks, images) You will need to fill pages. There will be Home  About FAQ Contact Pricing Service Error 404 Sign In Sign Up. No CMS is needed pages will not change often. You might convert HTML template to PHP if it makes the task easier.Waiting to your bids! No copy-paste in your bids please. Instead just tell me how are you going to approach this task. Kind RegardsYevhen",
+          "houers": "less than 30",
+          "reating": 4,
+          "type": "contract to hier",
+          "skills": [
+            "Css",
+            "Html"
+          ],
+          "skillsCategiory": [
+            "Front end developer ",
+            "Full Stack "
+          ],
+          "propsals": 0,
+          "payment": true,
+          "city": "india",
+          "spent": 30
+        }
+      ]
     }
   ]
 }

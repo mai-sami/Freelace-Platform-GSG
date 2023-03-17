@@ -10,8 +10,7 @@ export const GetFavouritJobs = createAsyncThunk(
             const response = await axios.get(
                 `${Base_Url}favourit`,
             )
-            console.log(response.data, "item")
-            return response.data
+             return response.data
         } catch (error) {
             if (error.response && error.response.data.message) {
                 return rejectWithValue(error.response.data.message)
@@ -21,10 +20,9 @@ export const GetFavouritJobs = createAsyncThunk(
         }
     }
 )
-
 export const FavouritJobs = createAsyncThunk(
     'jobs/favourit',
-    async ({id,data}, { rejectWithValue }) => {
+    async ([id,{data}], { rejectWithValue }) => {
         try {
             const response = await axios.post(
                 `${Base_Url}favourit`, {id,data }
