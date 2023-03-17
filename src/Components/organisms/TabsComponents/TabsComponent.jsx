@@ -13,7 +13,7 @@ import SavedJobs from "./SavedJobs/SavedJobs";
 import Paginations from "../../atoms/Paginations/Pagination";
 import { Flex } from "../../../Style/Layout";
 import { GetAllJobs } from "../../../Redux/Jobs/jobsActions";
- 
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -62,7 +62,7 @@ export default function TabsComponent() {
     const limit = 1;
     console.log(page, "page");
     dispatch(GetAllJobs({ page, limit }));
-  }, [page,dispatch]);
+  }, [page, dispatch]);
   const HandelChange = (e, value) => {
     setPage(value);
   };
@@ -84,8 +84,8 @@ export default function TabsComponent() {
         <TabPanel value={value} index={0}>
           <BestMatchesLoad />
           <Flex justifyContent={"center"}>
-          <Paginations onChange={HandelChange} />
-        </Flex>
+            <Paginations onChange={HandelChange} />
+          </Flex>
         </TabPanel>
         <TabPanel value={value} index={1}>
           <MostRecently />
@@ -93,7 +93,6 @@ export default function TabsComponent() {
         <TabPanel value={value} index={2}>
           <SavedJobs />
         </TabPanel>
-      
       </Box>
     </>
   );

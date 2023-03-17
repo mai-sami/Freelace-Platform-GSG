@@ -6,21 +6,21 @@ import SearchHeader from "../../Components/atoms/SearchComponents/SearchHeader";
 import SideBarDashboard from "./SideBarDashboard";
 import TabsComponent from "../../Components/organisms/TabsComponents/TabsComponent";
 import Boxadvertion from "../../Components/molecules/Boxadvertion/Boxadvertion";
- 
+
 function AllContents() {
   return (
     <FlexResp width={"80%"}>
       <Box border={"none"}>
         <Column>
-        <Boxadvertion />
+          <Boxadvertion />
           <SearchHeader />
-          <Box margin={"1rem auto auto"} width={"100%"}>
+          <Box margin={"1rem auto auto auto"} width={"100%"}>
             <TabsComponent />
           </Box>
         </Column>
       </Box>
       <div>
-        <Box width={"270px"}>
+        <Box margin={"1.5rem auto auto 2rem"} width={"270px"}>
           <SideBarDashboard />
         </Box>
         <Proposals

@@ -17,7 +17,7 @@ padding:${({ padding }) => padding};
 margin:${({ margins }) => margins};
 
  `
- export const TitleTexts = styled(TitleText)`
+export const TitleTexts = styled(TitleText)`
  &:hover {
   color: #108a00 ;
   cursor: pointer;
