@@ -3,11 +3,9 @@ import { Span } from "../../../Style/GlobalElements";
 import { Column, Flex } from "../../../Style/Layout";
 import CustomizedDialogs from "../../molecules/Dialogs/Dialog";
 import IconsFlex from "../IconsFlexComponent/IconsFlex";
-import EditIcon from "@mui/icons-material/Edit";
-import AutocompleteAsync from "../../molecules/Autocomplete/AutocompleteAsync";
+ import AutocompleteAsync from "../../molecules/Autocomplete/AutocompleteAsync";
 import { Degree } from "../../../Mock/StaticData";
-import { CircelDiv } from "../IconsFlexComponent/style";
-import AddIcon from "@mui/icons-material/Add";
+ import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
 import {  AddLanguges, GetUserLanguages } from "../../../Redux/Prifiles/profileActions";
 
@@ -31,7 +29,7 @@ function Languages() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetUserLanguages());
-  }, []);
+  }, [dispatch]);
   const { languages } = useSelector((state) => state.profile);
   const HandelSubmit = () => {
     console.log(name, type);

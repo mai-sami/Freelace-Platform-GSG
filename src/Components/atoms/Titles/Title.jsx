@@ -6,7 +6,7 @@ function Title({name}) {
   console.log(name)
    return (
     <>
-      <TitleText fontSize={"20px"}>{name}</TitleText>
+      <TitleText fontSize={"20px"}>{toTitleCase(name)}</TitleText>
     </>
   );
 }

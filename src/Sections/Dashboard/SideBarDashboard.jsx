@@ -15,7 +15,7 @@ function SideBarDashboard() {
     <Column padding={"1rem 0 0"} alignItems="center">
       <Avetaer width={"55px"} height={"55px"} />
       <Link to={"/profile"}>
-        <Title />
+        <Title name={data[0]?.first_name}/>
       </Link>
       <Span>{data[0]?.feaild}</Span>
 

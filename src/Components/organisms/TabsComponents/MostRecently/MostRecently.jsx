@@ -1,15 +1,16 @@
-import React, { lazy, useEffect } from "react";
+import React, {useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { GetAllJobs } from "../../../../Redux/Jobs/jobsActions";
+import { GetAllJobsRecent } from "../../../../Redux/Jobs/jobsActions";
 import { Span } from "../../../../Style/GlobalElements";
 import { Column } from "../../../../Style/Layout";
 import Cards from "../../CardJobs/Cards";
 
 function MostRecently() {
-  const { Jobs } = useSelector((state) => state.jobs);
+  const { jobsRecent } = useSelector((state) => state.jobs);
+  console.log(jobsRecent,"jobsRecent")
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(GetAllJobs());
+    dispatch(GetAllJobsRecent());
   }, [dispatch]);
   return (
     <Column>
@@ -17,7 +18,7 @@ function MostRecently() {
         Browse the most recent jobs that match your skills and profile
         description to the skills clients are looking for.
       </Span>
-      <Cards dataCard={Jobs} />
+      <Cards dataCard={jobsRecent} />
     </Column>
   );
 }

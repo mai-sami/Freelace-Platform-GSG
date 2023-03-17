@@ -34,7 +34,7 @@ export default function AutocompleteAsync({
     return () => {
       active = false;
     };
-  }, [loading]);
+  }, [loading,data]);
 
   useEffect(() => {
     if (!open) {

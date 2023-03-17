@@ -8,11 +8,12 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
   import { useDispatch, useSelector } from "react-redux";
 import { GetUserData } from "../../Redux/Prifiles/profileActions";
 import Availability from "../Dashboard/SideBard/Availability";
+import Title from "../../Components/atoms/Titles/Title";
 function Introduction() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetUserData());
-  }, []);
+  }, [dispatch]);
   const { data } = useSelector((state) => state.profile);
   return (
     <>
@@ -21,7 +22,7 @@ function Introduction() {
           <Flex alignItems={"left"}>
             <Logo />
             <Column marginLeft={"1.3rem"}>
-              {/* <Title name={item.first_name} /> */}
+            <Title name={data[0]?.first_name}/>
               <Span alignItems="center">
                 <LocationOnIcon style={{ fontSize: "16", color: "#5e6d55" }} />
                 {item.city} Territories – {Times} local time

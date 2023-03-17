@@ -16,7 +16,7 @@ function Portfolio() {
   const { Images } = useSelector((state) => state.profile);
   useEffect(() => {
     dispatch(GetProfileImages());
-  }, []);
+  }, [dispatch]);
   return (
     <Column>
       <Flex>

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { GetAllJobs} from "./jobsActions";
+import { GetAllJobs, GetAllJobsRecent} from "./jobsActions";
 
 export const jobsSlice = createSlice({
     name: "jobs",
@@ -8,7 +8,8 @@ export const jobsSlice = createSlice({
         messages: "",
         isLoading: false,
         isSuccess: false,
-        favourit: []
+        favourit: [],
+        jobsRecent:[]
      },
     reducers: {
     },
@@ -19,6 +20,12 @@ export const jobsSlice = createSlice({
         [GetAllJobs.fulfilled]: (state, { payload }) => {
             state.isLoading = false
             state.Jobs = payload
+            state.isSuccess = true
+
+        },
+        [GetAllJobsRecent.fulfilled]: (state, { payload }) => {
+            state.isLoading = false
+            state.jobsRecent = payload
             state.isSuccess = true
 
         },
