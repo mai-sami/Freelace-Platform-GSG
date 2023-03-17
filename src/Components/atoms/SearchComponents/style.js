@@ -37,7 +37,7 @@ export const InputHeaders = styled('input')`
 
       margin-left:1rem;
   `
-export const DivٍSearch = styled('div')`
+export const DivSearchs = styled('div')`
   outline: none;
       border: none;
        display: flex;

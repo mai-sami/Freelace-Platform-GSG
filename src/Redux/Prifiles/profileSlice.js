@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AddEducation, AddLanguges, AddProfileImages, DeleteEducation, EditHourTypeWork, EditLanguges, EditprofileBadge, EditprofileVisibility, EditUserDescription, EditUserPrice, EditUserSkills, EditUserText, GetProfileImages, GetUserData, GetUserLanguages } from "./profileActions";
+import { AddEducation, AddLanguges, AddProfileImages, DeleteEducation, EditHourTypeWork, EditprofileBadge, EditprofileVisibility, EditUserDescription, EditUserPrice, EditUserSkills, EditUserText, GetProfileImages, GetUserData, GetUserLanguages } from "./profileActions";
 
 export const profileSlice = createSlice({
     name: "profile",

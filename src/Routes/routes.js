@@ -1,10 +1,8 @@
-import { lazy } from "react";
-import { BaseLayout } from "../Layout/Layout";
+ import { BaseLayout } from "../Layout/Layout";
 import Register from "../Pages/Auth/Register/JoinAs/JoinAs";
 import Dashboard from "../Pages/Home/Dashboard";
 import NotFound from "../Pages/NotFound";
-import ProfileVisibility from "../Sections/Dashboard/SideBard/ProfileVisibility";
-import AuthProtected from "./ProtectedRoutes/AuthProtected";
+ import AuthProtected from "./ProtectedRoutes/AuthProtected";
 import Login from "../Pages/Auth/Login/Login";
 import JobsDetails from "../Pages/Home/JobsDetails/JobsDetails";
 import Filter from "../Pages/Home/Filter";

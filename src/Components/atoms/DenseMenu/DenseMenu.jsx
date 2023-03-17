@@ -47,7 +47,7 @@ export default function DenseMenu() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetUserData());
-  }, []);
+  }, [dispatch]);
 
   const HandelChange = (e) => {
     const Price = e.target.value;

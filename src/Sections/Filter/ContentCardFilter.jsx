@@ -7,8 +7,7 @@ import SavedJobs from "../../Components/organisms/TabsComponents/SavedJobs/Saved
 import BestMatches from "../../Components/organisms/TabsComponents/BestMatches/BestMatches";
 import { Box } from "../../Style/Layout";
 import SearchHeader from "../../Components/atoms/SearchComponents/SearchHeader";
-import Paginations from "../../Components/atoms/Paginations/Pagination";
-function TabPanel(props) {
+ function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
     <div

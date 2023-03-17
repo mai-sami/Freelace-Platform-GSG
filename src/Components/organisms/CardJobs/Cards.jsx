@@ -71,7 +71,7 @@ function Cards({ dataCard, ValueSearch }) {
           <React.Fragment key={anchor}>
             {dataCard?.map((item) => (
               <>
-                <CardsStyled>
+                <CardsStyled key={item.id}> 
                   <div onClick={toggleDrawer(anchor, true, item.id)}>
                     {anchor}
                     <Flex justifyContent={"space-between"}>

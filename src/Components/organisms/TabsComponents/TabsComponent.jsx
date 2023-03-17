@@ -13,8 +13,7 @@ import SavedJobs from "./SavedJobs/SavedJobs";
 import Paginations from "../../atoms/Paginations/Pagination";
 import { Flex } from "../../../Style/Layout";
 import { GetAllJobs } from "../../../Redux/Jobs/jobsActions";
-import { Pagination } from "@mui/material";
-
+ 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -58,12 +57,12 @@ export default function TabsComponent() {
   };
   useEffect(() => {
     dispatch(GetFavouritJobs());
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     const limit = 1;
     console.log(page, "page");
     dispatch(GetAllJobs({ page, limit }));
-  }, [page]);
+  }, [page,dispatch]);
   const HandelChange = (e, value) => {
     setPage(value);
   };
@@ -84,6 +83,9 @@ export default function TabsComponent() {
         </Box>
         <TabPanel value={value} index={0}>
           <BestMatchesLoad />
+          <Flex justifyContent={"center"}>
+          <Paginations onChange={HandelChange} />
+        </Flex>
         </TabPanel>
         <TabPanel value={value} index={1}>
           <MostRecently />
@@ -91,9 +93,7 @@ export default function TabsComponent() {
         <TabPanel value={value} index={2}>
           <SavedJobs />
         </TabPanel>
-        <Flex justifyContent={"center"}>
-          <Paginations onChange={HandelChange} />
-        </Flex>
+      
       </Box>
     </>
   );

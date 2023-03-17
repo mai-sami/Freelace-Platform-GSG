@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { DivSearchHeader, DivٍSearch, InputHeaders } from "./style";
+import React, {useState } from "react";
+import { DivSearchHeader, DivSearchs,InputHeaders } from "./style";
 import SearchIcon from "@mui/icons-material/Search";
 import { Span } from "../../../Style/GlobalElements";
 import { Flex } from "../../../Style/Layout";
@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 function SearchHeader() {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
-
   const [array, setArray] = useState([]);
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -34,9 +33,9 @@ function SearchHeader() {
             placeholder="Search for jobs"
           />
           <input type="submit" style={{ visibility: "hidden" }} />
-          <DivٍSearch onClick={HandelSubmit}>
+          <DivSearchs onClick={HandelSubmit}>
             <SearchIcon />
-          </DivٍSearch>
+          </DivSearchs>
         </form>
       </DivSearchHeader>
       <Flex>
