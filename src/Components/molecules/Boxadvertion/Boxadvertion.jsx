@@ -8,7 +8,7 @@ import Title from "../../atoms/Titles/Title";
 function Boxadvertion() {
   const { data } = useSelector((state) => state.profile);
   return (
-    <Form padding={"1rem"} width={"96%"} margin={"auto"} height={"20px"}>
+    <Form shadow={"none"} padding={"1rem"} width={"96%"} margin={"auto"} height={"20px"}>
       <Flex justifyContent="space-between">
         <Column>
           <TitleText>{currentDate}</TitleText>
