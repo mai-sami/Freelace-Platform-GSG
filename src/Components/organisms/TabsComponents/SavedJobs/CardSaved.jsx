@@ -17,23 +17,26 @@ import {
 import { CardsStyled, Flex } from "../../../../Style/Layout";
 import { Span, TitleTexts } from "../../../../Style/GlobalElements";
 import { CircelDiv } from "../../../atoms/IconsFlexComponent/style";
- import Chips from "../../../atoms/ChipComponents/Chip";
+import Chips from "../../../atoms/ChipComponents/Chip";
 import Reademore from "../../Readmore/Reademore";
 function CardSaved({ ValueSearch }) {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   const { favourit } = useSelector((state) => state.favourit);
-  const dispatch = useDispatch();
+  console.log(favourit,"favourit")
+   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetFavouritJobs());
-  }, []);
-
+  }, [dispatch]);
   return (
     <>
-      {favourit?.map((item) => (
-        <CardsStyled>
+      {favourit?.map((data) => (
+        <>
+     {data.data?.map((item) => (
+       
+       <CardsStyled key={item.id}>
           <Flex justifyContent={"space-between"}>
             <TitleTexts>
-              <Keywords value={ValueSearch}>{item.data.title}</Keywords>
+              <Keywords value={ValueSearch}>{item.title}</Keywords>
             </TitleTexts>
             <Flex>
               <CircelDiv>
@@ -57,26 +60,26 @@ function CardSaved({ ValueSearch }) {
           </Flex>
           <Flex>
             <Span color="#5e6d55" fontWeight={"500"}>
-              {item.data.typePrice}{" "}
+              {item.typePrice}{" "}
             </Span>
             <Span>Est. Budget: </Span>
-            <Span>{item.data.price}$</Span>
-            <Span>Posted {item.data.time} houer</Span>
+            <Span>{item.price}$</Span>
+            <Span>Posted {item.time} houer</Span>
           </Flex>
 
           <Reademore ValueSearch={ValueSearch}>
-            {item.data.dicription}
+            {item.dicription}
           </Reademore>
-          <Chips ValueSearch={ValueSearch} Skills={item.data.skills} />
+          <Chips ValueSearch={ValueSearch} Skills={item.skills} />
           <Span color="#5e6d55">
             {" "}
             Propsals
-            {item.data.propsals}
+            {item.propsals}
           </Span>
 
           <Flex>
             <Span margins={".4rem .4rem .4rem 0 "} alignItems={"center"}>
-              {item.data.payment ? (
+              {item.payment ? (
                 <Span
                   alignItems={"center"}
                   color={"#5e6d55"}
@@ -110,19 +113,22 @@ function CardSaved({ ValueSearch }) {
                 </Span>
               )}{" "}
             </Span>
-            <Rating value={item.data.reating} readOnly size="small" />
+            <Rating value={item.reating} readOnly size="small" />
             <Span margins={".4rem"}>
-              {item.data.payment === false
+              {item.payment === false
                 ? "$0 spent"
-                : `$${item.data.spent} spent`}
+                : `$${item.spent} spent`}
             </Span>
             <Flex margin={".3rem"}>
               <LocationOnIcon style={{ color: "#5e6d55", fontSize: "14px" }} />
-              <Span>{item.data.city}</Span>
+              <Span>{item.city}</Span>
             </Flex>
           </Flex>
           <Divider style={{ margin: "1rem 0 2rem 0" }} />
         </CardsStyled>
+              ))}
+
+      </>
       ))}
     </>
   );

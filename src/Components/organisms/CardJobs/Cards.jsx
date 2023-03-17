@@ -31,7 +31,7 @@ function Cards({ dataCard, ValueSearch }) {
   const goToFavourit = (id) => {
     const data = Jobs.filter((element) => element.id === id);
     console.log(id, data);
-    dispatch(FavouritJobs({ id, data }));
+    dispatch(FavouritJobs([id, {data} ]));
   };
   const [state, setState] = useState({
     right: false,
@@ -68,11 +68,10 @@ function Cards({ dataCard, ValueSearch }) {
     <>
       <div>
         {["right"].map((anchor) => (
-          <React.Fragment key={anchor}>
+          <div key={anchor}>
             {dataCard?.map((item) => (
               <>
                 <CardsStyled key={item.id}> 
-                  <div onClick={toggleDrawer(anchor, true, item.id)}>
                     {anchor}
                     <Flex justifyContent={"space-between"}>
                       <TitleTexts>
@@ -99,6 +98,7 @@ function Cards({ dataCard, ValueSearch }) {
                         </CircelDiv>
                       </Flex>
                     </Flex>
+                  <div onClick={toggleDrawer(anchor, true, item.id)}>
                     <Flex>
                       <Span color="#5e6d55" fontWeight={"500"}>
                         {item.typePrice}{" "}
@@ -182,7 +182,7 @@ function Cards({ dataCard, ValueSearch }) {
                 </Drawer>
               </>
             ))}
-          </React.Fragment>
+          </div>
         ))}
       </div>
     </>

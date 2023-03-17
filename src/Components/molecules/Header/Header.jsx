@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -24,8 +24,8 @@ const pages = ["Find Work", "My Jobs", "Reports", "Messages"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -84,14 +84,14 @@ function Header() {
               ))}
             </Menu>
           </Box>
-        
+
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               color: "#001e00",
             }}
-            style={{margin:"0 1rem 0 1rem"}}
+            style={{ margin: "0 1rem 0 1rem" }}
           >
             <Link className="links" to={"/"}>
               <Button
@@ -109,7 +109,7 @@ function Header() {
                 {"My Jobs"}
               </Button>
             </Link>
-            <Link className="links" to={"/"}>
+            <Link className="links" to={"/profile"}>
               <Button
                 className="links"
                 sx={{ my: 2, color: "black", display: "block" }}
@@ -129,29 +129,27 @@ function Header() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Flex>
-
-                <SearchComponents  placeholder={"started to search jobs"} />
-                 <AddAlertIcon
-                  style={{
-                    color: "#001e00",
-                    margin: "0 .8rem 0 2rem",
-                    fontSize: "24px",
-                  }}
-                />
-                <TelegramIcon
-                  style={{
-                    color: "#001e00",
-                    margin: "0 1.2rem 0 .4rem",
-                    fontSize: "24px",
-                  }}
-                  />
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Tooltip title="Open settings">
-                <Avetaer width={"40px"} height={"40px"} />
-            </Tooltip>
+              <SearchComponents placeholder={"started to search jobs"} />
+              <AddAlertIcon
+                style={{
+                  color: "#001e00",
+                  margin: "0 .8rem 0 2rem",
+                  fontSize: "24px",
+                }}
+              />
+              <TelegramIcon
+                style={{
+                  color: "#001e00",
+                  margin: "0 1.2rem 0 .4rem",
+                  fontSize: "24px",
+                }}
+              />
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Tooltip title="Open settings">
+                  <Avetaer width={"40px"} height={"40px"} />
+                </Tooltip>
               </IconButton>
-                  </Flex>
-
+            </Flex>
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"

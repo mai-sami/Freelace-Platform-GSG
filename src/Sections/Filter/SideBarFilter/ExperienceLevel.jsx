@@ -12,14 +12,13 @@ function ExperienceLevel() {
     setOpen(!open);
   };
   const handelChecks = (e) => {
-    const catrgoies = "levels";
     const { value } = e.target;
-    const Data= `levels=${value}`
+    const Data = `levels=${value}`;
     console.log(Data);
     dispatch(GetFilterJobs(Data));
+    //  navigate(`/filter?levels=${values}`);
   };
   return (
-    
     <>
       <Dropdown
         onChange={handelChecks}

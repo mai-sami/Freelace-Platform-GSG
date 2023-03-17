@@ -11,7 +11,6 @@ export const filterSlice = createSlice({
         Search:[]
     },
     reducers: {
-
     },
     extraReducers: {
 
