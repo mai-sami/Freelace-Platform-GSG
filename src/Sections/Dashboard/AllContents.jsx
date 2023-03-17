@@ -5,12 +5,14 @@ import Proposals from "../../Components/organisms/BoxProposals/Proposals";
 import SearchHeader from "../../Components/atoms/SearchComponents/SearchHeader";
 import SideBarDashboard from "./SideBarDashboard";
 import TabsComponent from "../../Components/organisms/TabsComponents/TabsComponent";
+import Boxadvertion from "../../Components/molecules/Boxadvertion/Boxadvertion";
  
 function AllContents() {
   return (
     <FlexResp width={"80%"}>
       <Box border={"none"}>
         <Column>
+        <Boxadvertion />
           <SearchHeader />
           <Box margin={"1rem auto auto"} width={"100%"}>
             <TabsComponent />

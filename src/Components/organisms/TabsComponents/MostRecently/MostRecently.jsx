@@ -1,4 +1,4 @@
-import React, {useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAllJobsRecent } from "../../../../Redux/Jobs/jobsActions";
 import { Span } from "../../../../Style/GlobalElements";
@@ -7,7 +7,7 @@ import Cards from "../../CardJobs/Cards";
 
 function MostRecently() {
   const { jobsRecent } = useSelector((state) => state.jobs);
-  console.log(jobsRecent,"jobsRecent")
+  console.log(jobsRecent, "jobsRecent");
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetAllJobsRecent());

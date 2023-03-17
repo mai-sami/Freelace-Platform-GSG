@@ -15,11 +15,11 @@ function SideBarDashboard() {
     <Column padding={"1rem 0 0"} alignItems="center">
       <Avetaer width={"55px"} height={"55px"} />
       <Link to={"/profile"}>
-        <Title name={data[0]?.first_name}/>
+        <Title name={data[0]?.first_name} />
       </Link>
       <Span>{data[0]?.feaild}</Span>
 
-       <ProgressBars />
+      <ProgressBars />
       <Link to={"/"}>
         <Span fontWeight={"600"} color="#14a800">
           102 Available Connects

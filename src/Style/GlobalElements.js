@@ -73,7 +73,7 @@ border:${({ border }) => border || "1px solid #beccbe"};
 border-radius: 20px;
 margin:${({ margin }) => margin || "6rem auto auto auto"};
 width:${({ width }) => width || "37%"};
-min-height:${({ width }) => width || "300px"};
+min-height:${({ height }) => height || "300px"};
 
 display:${({ display }) => display};
 flex-wrap: wrap;

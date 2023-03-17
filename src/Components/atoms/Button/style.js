@@ -18,7 +18,6 @@ position:${({ position }) => position};
 top: ${({ top }) => top};
 right: ${({ right }) => right};
 cursor: pointer;
-max-height: 40px;
 display: inline-flex;
 justify-content: ${({ justifyContent }) => justifyContent||"center"};
 align-items: center;
