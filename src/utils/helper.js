@@ -6,9 +6,7 @@ export default function toTitleCase(str) {
 
   return titleCase;
 }
-
 export const Times = new Date().toLocaleTimeString('lv-LV', { hour: '2-digit', minute: '2-digit' })
-
 
 export const current = new Date();
 export const currentDate = current.toDateString()
