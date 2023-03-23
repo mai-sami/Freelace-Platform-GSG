@@ -30,16 +30,14 @@ function Cards({ dataCard, ValueSearch }) {
   const dispatch = useDispatch();
   const goToFavourit = (id) => {
     const data = Jobs.filter((element) => element.id === id);
-    console.log(id, data);
-    dispatch(FavouritJobs([id, {data} ]));
+     dispatch(FavouritJobs([id, {data} ]));
   };
   const [state, setState] = useState({
     right: false,
   });
 
   const toggleDrawer = (anchor, open, id) => (event) => {
-    console.log(id);
-    if (
+     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
     ) {
@@ -50,8 +48,7 @@ function Cards({ dataCard, ValueSearch }) {
   };
 
   const list = (anchor, id) => {
-    console.log(id);
-    return (
+     return (
       <Box>
         <List style={{ width: "1000px" }}>
           <ListItem disablePadding>

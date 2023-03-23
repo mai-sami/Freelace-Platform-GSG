@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import IconsFlex from "../IconsFlexComponent/IconsFlex";
-import { CircelDiv } from "../IconsFlexComponent/style";
 import { Span } from "../../../Style/GlobalElements";
 import { Column, Flex } from "../../../Style/Layout";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CustomizedDialogs from "../../molecules/Dialogs/Dialog";
 import AutocompleteAsync from "../../molecules/Autocomplete/AutocompleteAsync";
-import EditIcon from "@mui/icons-material/Edit";
 import { Degrees, endDate, startDate, Study } from "../../../Mock/StaticData";
 import { useDispatch, useSelector } from "react-redux";
 import {
   AddEducation,
   DeleteEducation,
   GetUserEducation,
-} from "../../../Redux/Prifiles/profileActions";
+} from "../../../Redux/Profile/profileActions";
 function Education() {
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {

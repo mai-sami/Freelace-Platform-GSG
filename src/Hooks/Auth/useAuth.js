@@ -2,13 +2,13 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { API_URL } from "../../Config/api";
- 
+import { API_URL } from "../../api/api";
+
 
 const UseAuth = () => {
-     const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
-    const navgate=useNavigate()
+    const navgate = useNavigate()
     const loginAction = async (userData) => {
         try {
             setIsLoading(true);

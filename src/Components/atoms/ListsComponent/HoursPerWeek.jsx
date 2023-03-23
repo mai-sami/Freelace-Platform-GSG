@@ -11,11 +11,11 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   EditHourTypeWork,
   GetUserData,
-} from "../../../Redux/Prifiles/profileActions";
+} from "../../../Redux/Profile/profileActions";
 function HoursPerWeek() {
   const [open, setOpen] = useState(false);
-   const { data } = useSelector((state) => state.profile);
-  
+  const { data } = useSelector((state) => state.profile);
+
   const [perWeek, setTopping] = useState(null);
 
   const onOptionChange = (e) => {
@@ -30,14 +30,13 @@ function HoursPerWeek() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetUserData());
-  }, []);
+  });
   const handelSubmit = () => {
-    const id =1
+    const id = 1;
     console.log(perWeek);
     dispatch(EditHourTypeWork([id, ...data, perWeek]));
     setOpen(false);
-
-  }; 
+  };
   return (
     <>
       <>
@@ -75,7 +74,7 @@ function HoursPerWeek() {
             </CustomizedDialogs>
           </IconsFlex>
           <Span>{data[0]?.perWeek}</Span>
-         </Column>
+        </Column>
       </>
     </>
   );

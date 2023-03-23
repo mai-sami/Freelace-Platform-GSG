@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import EditIcon from "@mui/icons-material/Edit";
 import { Flex } from "../../../../Style/Layout";
 import { CircelDiv } from "../../IconsFlexComponent/style";
-  import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Span } from "../../../../Style/GlobalElements";
+import CustomizedDialogs from "../../../molecules/Dialogs/Dialog";
+import Reademore from "../../../organisms/Readmore/Reademore";
 import {
   EditUserDescription,
   GetUserData,
-} from "../../../../Redux/Prifiles/profileActions";
-import {Span } from "../../../../Style/GlobalElements";
-import CustomizedDialogs from "../../../molecules/Dialogs/Dialog";
-import Reademore from "../../../organisms/Readmore/Reademore";
+} from "../../../../Redux/Profile/profileActions";
 function Description() {
   const [open, setOpen] = useState(false);
   const [discription, setDescription] = useState("");
@@ -23,7 +23,7 @@ function Description() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetUserData());
-  }, []);
+  });
   const { data } = useSelector((state) => state.profile);
   const HandelEditTitle = () => {
     const id = 1;

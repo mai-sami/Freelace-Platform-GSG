@@ -9,7 +9,6 @@ import CardSaved from "./CardSaved";
 function SavedJobs() {
   const { favourit } = useSelector((state) => state.favourit);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(GetFavouritJobs());
   }, [dispatch]);

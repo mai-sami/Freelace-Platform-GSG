@@ -51,7 +51,7 @@ export default function TabsComponent() {
   const [value, setValue] = useState(0);
   const [page, setPage] = useState(0);
   const { favourit } = useSelector((state) => state.favourit);
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -60,7 +60,6 @@ export default function TabsComponent() {
   }, [dispatch]);
   useEffect(() => {
     const limit = 1;
-    console.log(page, "page");
     dispatch(GetAllJobs({ page, limit }));
   }, [page, dispatch]);
   const HandelChange = (e, value) => {
@@ -71,10 +70,7 @@ export default function TabsComponent() {
       <Box sx={{ width: "100%", padding: "3rem 0 2rem 0" }}>
         <TitleText padding="0 0 2rem 2rem">Jobs you might like</TitleText>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-           >
+          <Tabs value={value} onChange={handleChange}>
             <Tab label="Best Matches" {...a11yProps(0)} />
             <Tab label="Most Recent" {...a11yProps(1)} />
             <Tab label={`Saved Jobs (${+favourit.length})`} {...a11yProps(2)} />

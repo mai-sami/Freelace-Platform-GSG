@@ -13,12 +13,11 @@ function AllContent() {
     <>
       <Box>
         <Introduction />
-        <>
-          <FlexResponsive>
-            <BasicList />
-            <DenseMenu />
-          </FlexResponsive>
-        </>
+
+        <FlexResponsive>
+          <BasicList />
+          <DenseMenu />
+        </FlexResponsive>
       </Box>
       <Testimonials />
       <Certifications />

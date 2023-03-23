@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Column } from "../../../Style/Layout";
 import IconsFlex from "../IconsFlexComponent/IconsFlex";
 import EditIcon from "@mui/icons-material/Edit";
-import Chips from "../ChipComponents/Chip";
+import Chips, { ChipsSkills } from "../ChipComponents/Chip";
 import { useSelector } from "react-redux";
 import { ModealSkills } from "../../molecules/Autocomplete/ModealSkills";
 
@@ -22,8 +22,9 @@ function Skills({ value }) {
       <IconsFlex name={"Skills"}>
         <EditIcon onClick={handleClickOpen} />
       </IconsFlex>
-      {data?.map((item) => (
-        <Chips Skills={item.skillsItem} />
+   
+        {data?.map((item) => (
+        <ChipsSkills Skills={item.skillsItem} />
       ))}
       <ModealSkills open={open} handleClose={handleClose} />
     </Column>

@@ -36,7 +36,7 @@ function JoinAs() {
               Join as a client or freelancer
             </TitleText>
             <Flex margin={"1.3rem"}>
-              <Card margin={"1rem"} width={"50%"}>
+              <Card height={"44px"} margin={"1rem"} width={"50%"}>
                 <Flex justifyContent={"space-between"}>
                   {ImageChechbox}
                   <CheckBoxs
@@ -50,12 +50,11 @@ function JoinAs() {
                       setChecks("client") &
                       setDisabled((disabled) => (disabled = false))
                     }
-
                   />
                 </Flex>
                 <TitleText>I’m a freelancer, looking for work</TitleText>
               </Card>
-              <Card margin={"1rem"} width={"50%"}>
+              <Card height={"44px"} margin={"1rem"} width={"50%"}>
                 <Flex justifyContent={"space-between"}>
                   {imageSecand}
                   <CheckBoxs

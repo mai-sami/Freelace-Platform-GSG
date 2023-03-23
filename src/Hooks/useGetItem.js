@@ -1,13 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
-import { Base_Url } from "../../Config/api";
-
+ 
 const UseApi = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
-     const [job, setJobs] = useState([])
-
-
+    const [job, setJobs] = useState([])
     const GetJobItem = async (url) => {
         try {
             setIsLoading(true);

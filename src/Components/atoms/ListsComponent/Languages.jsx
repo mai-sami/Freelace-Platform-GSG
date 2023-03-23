@@ -7,8 +7,8 @@ import IconsFlex from "../IconsFlexComponent/IconsFlex";
 import { Degree } from "../../../Mock/StaticData";
  import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
-import {  AddLanguges, GetUserLanguages } from "../../../Redux/Prifiles/profileActions";
-
+import { AddLanguges, GetUserLanguages } from "../../../Redux/Profile/profileActions";
+ 
 function Languages() {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState(null);
