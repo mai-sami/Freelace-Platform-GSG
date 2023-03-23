@@ -3,8 +3,8 @@ import { Skills } from "../../../Mock/StaticData";
 import CustomizedDialogs from "../Dialogs/Dialog";
 import { Span } from "../../../Style/GlobalElements";
 import { useDispatch, useSelector } from "react-redux";
-import { EditUserSkills } from "../../../Redux/Prifiles/profileActions";
-import AutocompleteAsync from "./AutocompleteAsync";
+ import AutocompleteAsync from "./AutocompleteAsync";
+import { EditUserSkills } from "../../../Redux/Profile/profileActions";
 
 export const ModealSkills = ({ SkiilsOption, handleClose, open }) => {
   const [skillsItem, setSkiilsOption] = React.useState([]);

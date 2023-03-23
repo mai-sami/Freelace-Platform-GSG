@@ -12,7 +12,7 @@
       "feaild": "Front-End (React js) Developer",
       "discription": "Life is very boring,but that's okay !!",
       "selectedOptions": null,
-      "profileVisibility": "Public",
+      "profileVisibility": "Upwork Users Only",
       "checks": "freelancer",
       "badge": "off",
       "categiory": "Front End Developer",
@@ -28,15 +28,15 @@
       ],
       "skillsItem": [
         [
-          "Visual Basic",
-          "C++"
+          "Cobol",
+          "C"
         ]
       ],
       "catigrys": [
         "Ecommerce Development",
         "Web Development"
       ],
-      "perWeek": "More than 30 hrs/week",
+      "perWeek": "Less than 30 hrs/week",
       "history": "ff",
       "title": "b",
       "hours": "7"
@@ -161,5 +161,6 @@
         }
       ]
     }
+  
   ]
 }

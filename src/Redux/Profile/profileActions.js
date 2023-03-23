@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "axios"
-import { Base_Url } from "../../Config/api"
+import { Base_Url } from "../../api/api"
 
 export const GetUserData = createAsyncThunk(
     'profile/alldata',

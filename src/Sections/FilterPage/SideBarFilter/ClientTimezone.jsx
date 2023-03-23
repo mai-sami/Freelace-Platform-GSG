@@ -1,4 +1,3 @@
-import { Divider } from "@mui/material";
 import React, { useState } from "react";
 import Dropdown from "../../../Components/atoms/DropdownComponent/Dropdown";
 import SearchComponents from "../../../Components/atoms/SearchComponents/Search";

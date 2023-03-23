@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import CustomizedDialogs from '../../Components/molecules/Dialogs/Dialog'
-import { AddProfileImages, GetProfileImages } from '../../Redux/Prifiles/profileActions';
-import { InputField, Span } from '../../Style/GlobalElements'
+import { AddProfileImages, GetProfileImages } from '../../Redux/Profile/profileActions';
+ import { InputField, Span } from '../../Style/GlobalElements'
 import { Flex } from '../../Style/Layout'
 
 function ProfileImages({ images, setOpen, open }) {
@@ -23,7 +23,7 @@ function ProfileImages({ images, setOpen, open }) {
         <>
             <Flex overflow={"auto"} width={"100%"}>
                 {Images?.map((item) => (
-                    <Flex margin={"1rem"}>
+                    <Flex key={item} margin={"1rem"}>
                         <img width={"200px"} height={"200px"} src={item.imageOne} alt="item.imageOne" />
                     </Flex>
                 ))}

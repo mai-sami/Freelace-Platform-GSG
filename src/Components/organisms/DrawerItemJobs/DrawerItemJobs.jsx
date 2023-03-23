@@ -2,8 +2,8 @@ import { Divider, Rating } from "@mui/material";
 import React, { useEffect } from "react";
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
 import CreditCardOffIcon from "@mui/icons-material/CreditCardOff";
-import UseApi from "../../../Hooks/Filter/useFilter";
-import { Base_Url } from "../../../Config/api";
+import UseApi from "../../../Hooks/useGetItem";
+import { Base_Url } from "../../../api/api";
 import { Box, Column, Flex, FlexResp } from "../../../Style/Layout";
 import { Span, TitleText } from "../../../Style/GlobalElements";
 import Chips from "../../atoms/ChipComponents/Chip";
@@ -11,10 +11,10 @@ import Button from "../../atoms/Button/Button";
 import { Link } from "react-router-dom";
 
 function DrawerItemJobs({ id }) {
-   const { job, GetJobItem } = UseApi();
+  const { job, GetJobItem } = UseApi();
   useEffect(() => {
     GetJobItem(`${Base_Url}jobs/${id}`);
-  }, []);
+  });
   return (
     <Column>
       <>

@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "axios"
-import { Base_Url } from "../../Config/api"
+import { Base_Url } from "../../api/api"
 
 export const GetAllJobs = createAsyncThunk(
     'jobs/allJobs',//name+login  name what the function do
@@ -27,7 +27,7 @@ export const GetAllJobsRecent = createAsyncThunk(
             const response = await axios.get(
                 `${Base_Url}jobs?_sort=timeposted&_order=desc`,
             )
-             return response.data
+            return response.data
         } catch (error) {
             if (error.response && error.response.data.message) {
                 return rejectWithValue(error.response.data.message)

@@ -2,20 +2,20 @@ import { Divider, Rating } from "@mui/material";
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../../../Components/atoms/Button/Button";
-import { Base_Url } from "../../../Config/api";
-import UseApi from "../../../Hooks/Filter/useFilter";
+import { Base_Url } from "../../../api/api";
+import UseApi from "../../../Hooks/useGetItem";
 import { Span, TitleText } from "../../../Style/GlobalElements";
 import { Box, Column, Flex, FlexResp } from "../../../Style/Layout";
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
 import CreditCardOffIcon from "@mui/icons-material/CreditCardOff";
- import Chips from "../../../Components/atoms/ChipComponents/Chip";
+import Chips from "../../../Components/atoms/ChipComponents/Chip";
 
 function JobsDetails() {
   const { id } = useParams();
   const { job, GetJobItem } = UseApi();
   useEffect(() => {
     GetJobItem(`${Base_Url}jobs/${id}`);
-  }, []);
+  },[]);
   return (
     <Column style={{ width: "100%" }}>
       <>

@@ -18,12 +18,12 @@ import Portfolio from "./Secations/Portfolio";
 import "../../../index.css";
 import ProjectCatalog from "./Secations/ProjectCatalog";
 import { useDispatch, useSelector } from "react-redux";
+import Skills from "./Skills";
 import {
-    EditUserPrice,
+  EditUserPrice,
   EditUserText,
   GetUserData,
-} from "../../../Redux/Prifiles/profileActions";
-import Skills from "./Skills";
+} from "../../../Redux/Profile/profileActions";
 export default function DenseMenu() {
   const [open, setOpen] = useState(false);
   const { data } = useSelector((state) => state.profile);
@@ -79,7 +79,7 @@ export default function DenseMenu() {
         <MenuItem>
           {data?.map((item) => (
             <>
-              <Flex justifyContent={"space-between"}>
+              <Flex key={item} justifyContent={"space-between"}>
                 <Column>
                   <IconsFlex name={item.feaild}>
                     <EditIcon onClick={handleClickOpen} open={open} />
@@ -111,9 +111,9 @@ export default function DenseMenu() {
           <WorkHistory />
         </MenuItem>
         <Divider />
-        <>
-          <Portfolio />
-        </>
+
+        <Portfolio />
+
         <Divider />
         <MenuItem>
           <Skills />

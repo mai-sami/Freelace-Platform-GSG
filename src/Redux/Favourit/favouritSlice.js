@@ -8,7 +8,8 @@ export const favouritSlice = createSlice({
         isLoading: false,
         isSuccess: false,
         data: [],
-        favourit: []
+        favourit: [],
+        count:0
     },
     reducers: {
     },
@@ -32,6 +33,7 @@ export const favouritSlice = createSlice({
             console.log([payload])
             console.log(payload)
             state.isLoading = false
+            state.count=payload.length
             state.data = payload
             state.isSuccess = true
 

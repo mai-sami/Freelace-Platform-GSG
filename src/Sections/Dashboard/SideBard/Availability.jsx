@@ -9,8 +9,8 @@ import RadioGroups from "../../../Components/molecules/CheckBoxComponent/RadioGr
 import { Labels, Span } from "../../../Style/GlobalElements";
 import { Availabilitys } from "../../../Mock/StaticData";
 import CustomizedDialogs from "../../../Components/molecules/Dialogs/Dialog";
-import { EditprofileBadge } from "../../../Redux/Prifiles/profileActions";
-function Availability() {
+import { EditprofileBadge } from "../../../Redux/Profile/profileActions";
+ function Availability() {
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
     setOpen(true);

@@ -6,9 +6,9 @@ import Button from "../../Components/atoms/Button/Button";
  import { Times } from "../../utils/helper";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
   import { useDispatch, useSelector } from "react-redux";
-import { GetUserData } from "../../Redux/Prifiles/profileActions";
-import Availability from "../Dashboard/SideBard/Availability";
+ import Availability from "../Dashboard/SideBard/Availability";
 import Title from "../../Components/atoms/Titles/Title";
+import { GetUserData } from "../../Redux/Profile/profileActions";
 function Introduction() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,7 +18,7 @@ function Introduction() {
   return (
     <>
       {data.map((item) => (
-        <Flex justifyContent="space-between">
+        <Flex key={item} justifyContent="space-between">
           <Flex alignItems={"left"}>
             <Logo />
             <Column marginLeft={"1.3rem"}>

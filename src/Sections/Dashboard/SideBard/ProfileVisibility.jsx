@@ -7,8 +7,8 @@ import { Labels, Span } from "../../../Style/GlobalElements";
 import RadioGroups from "../../../Components/molecules/CheckBoxComponent/RadioGroups";
 import { dataProfileVisibility } from "../../../Mock/StaticData";
 import { useDispatch, useSelector } from "react-redux";
-import { EditprofileVisibility } from "../../../Redux/Prifiles/profileActions";
-function ProfileVisibility() {
+import { EditprofileVisibility } from "../../../Redux/Profile/profileActions";
+ function ProfileVisibility() {
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
     setOpen(true);

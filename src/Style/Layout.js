@@ -14,7 +14,6 @@ border:${({ border }) => border || "1px solid #e4ebe4"};
  width:${({ width }) => width || "75%"};
 margin:${({ margin }) => margin || "2rem auto auto"}; 
 padding:${({ padding }) => padding};
-
 `
 export const Flex = styled('div')`
 display:flex;
@@ -33,7 +32,7 @@ padding-left:${({ paddingLeft }) => paddingLeft};
 flex-wrap:${({ flexWrap }) => flexWrap};
 
 `
- 
+
 export const FlexResponsive = styled(Flex)`
 align-items:${({ alignItems }) => alignItems || "baseline"};
 
